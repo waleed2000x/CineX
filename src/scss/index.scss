@@ -39,5 +39,24 @@ $appbarHeight: 100px;
 
 .wideScreenParent {
   display: flex;
+  align-items: center;
+  justify-content: space-between;
   height: $appbarHeight;
+  background-color: rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(4px);
+}
+.titleAppbar {
+  display: flex;
+  align-items: center;
+  margin: 10px 10px;
+  & h1 {
+    font-weight: 800;
+    font-size: 60px;
+    color: white;
+    & span {
+      color: #aa1004;
+      font-size: 70px;
+      margin: 0px 5px;
+    }
+  }
 }

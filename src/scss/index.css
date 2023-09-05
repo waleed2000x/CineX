@@ -19,5 +19,26 @@
 
 .wideScreenParent {
   display: flex;
+  align-items: center;
+  justify-content: space-between;
   height: 100px;
+  background-color: rgba(0, 0, 0, 0.3);
+  -webkit-backdrop-filter: blur(4px);
+          backdrop-filter: blur(4px);
+}
+
+.titleAppbar {
+  display: flex;
+  align-items: center;
+  margin: 10px 10px;
+}
+.titleAppbar h1 {
+  font-weight: 800;
+  font-size: 60px;
+  color: white;
+}
+.titleAppbar h1 span {
+  color: #aa1004;
+  font-size: 70px;
+  margin: 0px 5px;
 }/*# sourceMappingURL=index.css.map */
