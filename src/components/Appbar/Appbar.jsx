@@ -1,3 +1,5 @@
+import WideScreen from "./WideScreen/WideScreen";
+
 export default function Appbar() {
-  return <div>Appbar</div>;
+  return <WideScreen />;
 }

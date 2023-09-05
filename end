@@ -1,0 +1,22 @@
+  const apiKey = "573180add55876cdd18911a65315f1b3";
+  const searchQuery = "shades";
+
+  useEffect(() => {
+    const apiUrl = `https://api.themoviedb.org/3/search/movie?query=${searchQuery}&api_key=${apiKey}`;
+
+    fetch(apiUrl, {
+      method: "GET",
+      headers: {
+        Accept: "application/json",
+      },
+    })
+      .then((response) => response.json())
+      .then((data) => {
+        console.log(data);
+      })
+      .catch((error) => {
+        console.error("Error:", error);
+      });
+  }, []);
+  //https://image.tmdb.org/t/p/w500/ MOVIE IMAGE ENDPOINT
+  
