@@ -1,24 +1,43 @@
 import { ThemeContext } from "../../themeContext/ThemeContext";
 import { useContext } from "react";
 import { themes } from "../../themeContext/ThemeContext";
-import { Switch } from "@mui/material";
 import LogoLottie from "../../LogoLotties/LogoLottie";
+import LightModeIcon from "@mui/icons-material/LightMode";
+import DarkModeIcon from "@mui/icons-material/DarkMode";
+import { TextField, Typography } from "@mui/material";
 export default function WideScreen() {
   const { theme, setTheme } = useContext(ThemeContext);
+  console.log(theme);
   const handleTheme = () => {
     setTheme(theme === themes.light ? themes.dark : themes.light);
     console.log(theme);
   };
   return (
-    <div onClick={handleTheme} className="wideScreenParent">
+    <div className="wideScreenParent">
       <div className="titleAppbar">
         <LogoLottie />
-        <h1>
+        <Typography variant="h1" color={theme === "light" ? "black" : "white"}>
           Cine<span>X</span>
-        </h1>
+        </Typography>
       </div>
-      <div className="themeSwitch">
-        <Switch defaultChecked color="default" />
+      <div className="searchWideScreen">
+        <TextField
+          size="large"
+          label="Search movies to watch"
+          variant="standard"
+          fullWidth
+          color="error"
+        />
+      </div>
+      <div className={`themeSwitch `} onClick={handleTheme}>
+        <Typography variant="h5" color={theme === "light" ? "black" : "white"}>
+          Mode :
+        </Typography>
+        {theme === "light" ? (
+          <DarkModeIcon />
+        ) : (
+          <LightModeIcon style={{ color: "white" }} />
+        )}
       </div>
     </div>
   );

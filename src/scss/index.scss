@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&family=Caveat:wght@400;500;600;700&family=Instrument+Serif:ital@0;1&family=Kanit:ital,wght@0,400;1,300&family=Orbitron:wght@400;500;600;700;800;900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Rubik+Iso&display=swap");
+
 * {
   font-family: "Amatic SC", cursive;
   font-family: "Caveat", cursive;
@@ -11,7 +12,6 @@
 }
 .app {
   min-height: 100vh;
-
   background: rgb(0, 0, 0);
   background: -moz-linear-gradient(
     155deg,
@@ -33,30 +33,84 @@
   );
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#000000",endColorstr="#000000",GradientType=1);
 }
+.lightApp {
+  min-height: 100vh;
+  background: rgb(245, 245, 245);
+  background: -moz-linear-gradient(
+    155deg,
+    rgba(245, 245, 245, 1) 25%,
+    rgba(175, 226, 233, 1) 50%,
+    rgba(245, 245, 245, 1) 75%
+  );
+  background: -webkit-linear-gradient(
+    155deg,
+    rgba(245, 245, 245, 1) 25%,
+    rgba(175, 226, 233, 1) 50%,
+    rgba(245, 245, 245, 1) 75%
+  );
+  background: linear-gradient(
+    155deg,
+    rgba(245, 245, 245, 1) 25%,
+    rgba(175, 226, 233, 1) 50%,
+    rgba(245, 245, 245, 1) 75%
+  );
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#f5f5f5",endColorstr="#f5f5f5",GradientType=1);
+}
 
 // VARIABLES
 $appbarHeight: 100px;
-
+$red: #aa1004;
 .wideScreenParent {
   display: flex;
   align-items: center;
   justify-content: space-between;
   height: $appbarHeight;
-  background-color: rgba(0, 0, 0, 0.3);
-  backdrop-filter: blur(4px);
-}
-.titleAppbar {
-  display: flex;
-  align-items: center;
-  margin: 10px 10px;
-  & h1 {
-    font-weight: 800;
-    font-size: 60px;
-    color: white;
-    & span {
-      color: #aa1004;
-      font-size: 70px;
-      margin: 0px 5px;
+  background-color: rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(14px);
+  border-radius: 5px;
+  overflow: hidden;
+  margin: 0px 5px 5px 5px;
+  border: 2px solid rgba(0, 0, 0, 0.2);
+  .titleAppbar {
+    width: 20%;
+    display: flex;
+    align-items: center;
+    & h1 {
+      font-family: "Orbitron", sans-serif;
+      font-weight: 800;
+      font-size: 60px;
+      & span {
+        color: $red;
+        font-size: 70px;
+        margin: 0px 5px;
+      }
+    }
+  }
+  .searchWideScreen {
+    display: flex;
+    align-items: center;
+    width: 60%;
+    height: 100%;
+    .css-1x51dt5-MuiInputBase-input-MuiInput-input {
+      background-color: rgba(255, 255, 255, 0.1);
+      border-radius: 5px;
+      height: 20px;
+      padding: 15px;
+      color: $red;
+    }
+  }
+  .themeSwitch {
+    display: flex;
+    align-items: center;
+    width: 10%;
+    & h5 {
+      font-family: "Orbitron", sans-serif;
+      font-size: 25px;
+      font-weight: bold;
+    }
+    & svg {
+      font-size: 30px;
+      margin: 0px 10px;
     }
   }
 }

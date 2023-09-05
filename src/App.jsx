@@ -7,7 +7,7 @@ function App() {
   const [theme, setTheme] = useState(themes.dark);
   return (
     <ThemeContext.Provider value={{ theme, setTheme }}>
-      <div className="app">
+      <div className={`app ${theme === "light" ? "lightApp" : null}`}>
         <Routes>
           <Route path="/" element={<Home />}></Route>
         </Routes>
