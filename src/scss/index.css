@@ -78,4 +78,22 @@
 .wideScreenParent .themeSwitch svg {
   font-size: 30px;
   margin: 0px 10px;
+}
+
+.subBarWidescreen {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin-top: 10px;
+}
+.subBarWidescreen .subCenter {
+  display: flex;
+  width: 80%;
+  background-color: rgba(0, 0, 0, 0.2);
+  border: 2px solid rgba(0, 0, 0, 0.2);
+  border-radius: 3px;
+}
+.subBarWidescreen .subCenter button {
+  color: #aa1004;
 }/*# sourceMappingURL=index.css.map */
