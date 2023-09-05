@@ -145,9 +145,12 @@ $red: #aa1004;
   align-items: center;
   width: 100%;
   .popularMainImage {
+    display: flex;
     width: 80%;
+    overflow: hidden;
     & img {
-      width: 100%;
+      width: 300px;
+      height: auto;
     }
   }
 }

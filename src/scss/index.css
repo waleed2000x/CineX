@@ -115,8 +115,11 @@
   width: 100%;
 }
 .popularParent .popularMainImage {
+  display: flex;
   width: 80%;
+  overflow: hidden;
 }
 .popularParent .popularMainImage img {
-  width: 100%;
+  width: 300px;
+  height: auto;
 }/*# sourceMappingURL=index.css.map */
