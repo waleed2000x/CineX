@@ -1,6 +1,7 @@
 import axios from "axios";
 import Appbar from "../Appbar/Appbar";
 import { useEffect, useState } from "react";
+import Popular from "../Popular/Popular";
 
 export default function Home() {
   // const options = {
@@ -45,7 +46,7 @@ export default function Home() {
   return (
     <div>
       <Appbar />
-      <p>Home</p>
+      <Popular />
     </div>
   );
 }

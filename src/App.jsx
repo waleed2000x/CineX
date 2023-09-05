@@ -3,7 +3,7 @@ import "./scss/index.css";
 import Home from "./components/Home/Home";
 import { ThemeContext, themes } from "./components/themeContext/ThemeContext";
 import { useState } from "react";
-import img from "./Dark.jpg";
+// import img from "./Dark.jpg";
 function App() {
   const [theme, setTheme] = useState(themes.dark);
   return (
