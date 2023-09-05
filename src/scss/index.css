@@ -85,15 +85,12 @@
   justify-content: center;
   align-items: center;
   width: 100%;
-  margin-top: 10px;
 }
 .subBarWidescreen .subCenter {
   display: flex;
-  width: 80%;
+  justify-content: space-evenly;
+  width: 60%;
   background-color: rgba(0, 0, 0, 0.2);
   border: 2px solid rgba(0, 0, 0, 0.2);
   border-radius: 3px;
-}
-.subBarWidescreen .subCenter button {
-  color: #aa1004;
 }/*# sourceMappingURL=index.css.map */
