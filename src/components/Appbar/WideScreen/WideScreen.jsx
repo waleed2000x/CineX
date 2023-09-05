@@ -14,7 +14,7 @@ export default function WideScreen() {
     console.log(theme);
   };
   return (
-    <div>
+    <>
       <div className="wideScreenParent">
         <div className="titleAppbar">
           <LogoLottie />
@@ -53,6 +53,6 @@ export default function WideScreen() {
         </div>
       </div>
       <WideSubScreen />
-    </div>
+    </>
   );
 }

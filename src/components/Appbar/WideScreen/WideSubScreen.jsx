@@ -55,9 +55,6 @@ export default function WideSubScreen() {
               Genres
             </Typography>
             <Menu
-              //   style={{
-              //     background: ` ${theme === "light" ? "white" : "black"}`,
-              //   }}
               PaperProps={{
                 style: {
                   display: "flex",
@@ -65,6 +62,7 @@ export default function WideSubScreen() {
                   background: theme === "light" ? "white" : "black",
                   color: theme === "light" ? "black" : "white",
                   width: "20%",
+                  borderRadius: "10px",
                   border: `0.5px solid ${
                     theme === "light" ? "black" : "white"
                   }`,

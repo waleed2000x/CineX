@@ -10,6 +10,17 @@
   padding: 0px;
 }
 
+.img {
+  width: 100%;
+  height: 100%;
+}
+.img img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
 .app {
   min-height: 100vh;
   background: rgb(0, 0, 0);
@@ -25,17 +36,18 @@
 }
 
 .wideScreenParent {
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: space-between;
   height: 100px;
-  background-color: rgba(0, 0, 0, 0.2);
+  background-color: rgba(0, 0, 0, 0.1);
   -webkit-backdrop-filter: blur(14px);
           backdrop-filter: blur(14px);
   border-radius: 5px;
   overflow: hidden;
   margin: 0px 5px 5px 5px;
-  border: 2px solid rgba(0, 0, 0, 0.2);
+  border: 2px solid rgba(0, 0, 0, 0.1);
 }
 .wideScreenParent .titleAppbar {
   width: 20%;
@@ -45,11 +57,11 @@
 .wideScreenParent .titleAppbar h1 {
   font-family: "Orbitron", sans-serif;
   font-weight: 800;
-  font-size: 60px;
+  font-size: 50px;
 }
 .wideScreenParent .titleAppbar h1 span {
   color: #aa1004;
-  font-size: 70px;
+  font-size: 60px;
   margin: 0px 5px;
 }
 .wideScreenParent .searchWideScreen {
@@ -72,7 +84,7 @@
 }
 .wideScreenParent .themeSwitch h5 {
   font-family: "Orbitron", sans-serif;
-  font-size: 25px;
+  font-size: 20px;
   font-weight: bold;
 }
 .wideScreenParent .themeSwitch svg {
@@ -81,6 +93,8 @@
 }
 
 .subBarWidescreen {
+  position: absolute;
+  top: 110px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -90,7 +104,7 @@
   display: flex;
   justify-content: space-evenly;
   width: 60%;
-  background-color: rgba(0, 0, 0, 0.2);
-  border: 2px solid rgba(0, 0, 0, 0.2);
+  background-color: rgba(0, 0, 0, 0.1);
+  border: 2px solid rgba(0, 0, 0, 0.1);
   border-radius: 3px;
 }/*# sourceMappingURL=index.css.map */

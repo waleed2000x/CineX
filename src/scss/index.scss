@@ -10,6 +10,15 @@
   margin: 0px;
   padding: 0px;
 }
+.img {
+  width: 100%;
+  height: 100%;
+  & img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
 .app {
   min-height: 100vh;
   background: rgb(0, 0, 0);
@@ -61,16 +70,17 @@
 $appbarHeight: 100px;
 $red: #aa1004;
 .wideScreenParent {
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: space-between;
   height: $appbarHeight;
-  background-color: rgba(0, 0, 0, 0.2);
+  background-color: rgba(0, 0, 0, 0.1);
   backdrop-filter: blur(14px);
   border-radius: 5px;
   overflow: hidden;
   margin: 0px 5px 5px 5px;
-  border: 2px solid rgba(0, 0, 0, 0.2);
+  border: 2px solid rgba(0, 0, 0, 0.1);
   .titleAppbar {
     width: 20%;
     display: flex;
@@ -78,10 +88,10 @@ $red: #aa1004;
     & h1 {
       font-family: "Orbitron", sans-serif;
       font-weight: 800;
-      font-size: 60px;
+      font-size: 50px;
       & span {
         color: $red;
-        font-size: 70px;
+        font-size: 60px;
         margin: 0px 5px;
       }
     }
@@ -105,7 +115,7 @@ $red: #aa1004;
     width: 10%;
     & h5 {
       font-family: "Orbitron", sans-serif;
-      font-size: 25px;
+      font-size: 20px;
       font-weight: bold;
     }
     & svg {
@@ -115,16 +125,21 @@ $red: #aa1004;
   }
 }
 .subBarWidescreen {
+  position: absolute;
+  top: $appbarHeight + 10;
+  // left: 50%;
+  // right: 50%;
   display: flex;
   justify-content: center;
   align-items: center;
+
   width: 100%;
   .subCenter {
     display: flex;
     justify-content: space-evenly;
     width: 60%;
-    background-color: rgba(0, 0, 0, 0.2);
-    border: 2px solid rgba(0, 0, 0, 0.2);
+    background-color: rgba(0, 0, 0, 0.1);
+    border: 2px solid rgba(0, 0, 0, 0.1);
     border-radius: 3px;
   }
 }
