@@ -2,7 +2,7 @@ import { Button, Menu, MenuItem, Typography } from "@mui/material";
 import { useContext, useState } from "react";
 import { ThemeContext } from "../../themeContext/ThemeContext";
 import ArrowDropDownIcon from "@mui/icons-material/ArrowDropDown";
-
+import { NavLink } from "react-router-dom";
 export default function WideSubScreen() {
   const { theme } = useContext(ThemeContext);
   const [anchorEl, setAnchorEl] = useState(null);
@@ -30,11 +30,16 @@ export default function WideSubScreen() {
   return (
     <div className="subBarWidescreen">
       <div className="subCenter">
-        <Button variant="text" size="small" color="error">
-          <Typography variant="p" color={theme === "light" ? "black" : "white"}>
-            Popular
-          </Typography>
-        </Button>
+        <NavLink to="/popular">
+          <Button variant="text" size="small" color="error">
+            <Typography
+              variant="p"
+              color={theme === "light" ? "black" : "white"}
+            >
+              Popular
+            </Typography>
+          </Button>
+        </NavLink>
         <Button variant="text" size="small" color="error">
           <Typography variant="p" color={theme === "light" ? "black" : "white"}>
             New Releases

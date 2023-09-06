@@ -6,6 +6,7 @@ import LightModeIcon from "@mui/icons-material/LightMode";
 import DarkModeIcon from "@mui/icons-material/DarkMode";
 import { IconButton, TextField, Typography } from "@mui/material";
 import WideSubScreen from "./WideSubScreen";
+import { NavLink } from "react-router-dom";
 export default function WideScreen() {
   const { theme, setTheme } = useContext(ThemeContext);
   console.log(theme);
@@ -18,12 +19,14 @@ export default function WideScreen() {
       <div className="wideScreenParent">
         <div className="titleAppbar">
           <LogoLottie />
-          <Typography
-            variant="h1"
-            color={theme === "light" ? "black" : "white"}
-          >
-            Cine<span>X</span>
-          </Typography>
+          <NavLink to="/">
+            <Typography
+              variant="h1"
+              color={theme === "light" ? "black" : "white"}
+            >
+              Cine<span>X</span>
+            </Typography>
+          </NavLink>
         </div>
         <div className="searchWideScreen">
           <TextField
