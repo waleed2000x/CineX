@@ -64,6 +64,16 @@ export default function Popular() {
             );
           })}
         </div>
+        <div className="polularMovies">
+          {popularMovies.map((movie, i) => {
+            return (
+              <img
+                key={i}
+                src={`https://image.tmdb.org/t/p/w500/${movie.backdrop_path}`}
+              />
+            );
+          })}
+        </div>
       </div>
     </div>
   );
