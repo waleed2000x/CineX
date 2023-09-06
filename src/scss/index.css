@@ -116,10 +116,10 @@
 .mainParent .popularFirstSight .imageFirstSight .shader {
   position: absolute;
   bottom: 0px;
-  height: 80%;
+  height: 60%;
   width: 100%;
   z-index: 1;
-  background: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgb(0, 0, 0));
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0), #181818);
 }
 .mainParent .popularFirstSight .imageFirstSight video {
   width: 100%;
