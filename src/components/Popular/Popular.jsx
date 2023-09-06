@@ -43,6 +43,7 @@ export default function Popular() {
             className="imageFirstSight"
             whileHover={{ scale: 1.1, transition: { duration: 2 } }}
           >
+            {/* <video /> */}
             <img
               src={`https://image.tmdb.org/t/p/w500/${mainShow.backdrop_path}`}
             />
