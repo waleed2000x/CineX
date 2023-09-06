@@ -1,6 +1,4 @@
-import axios from "axios";
 import Appbar from "../Appbar/Appbar";
-import { useEffect, useState } from "react";
 import { Outlet } from "react-router-dom";
 
 export default function Home() {

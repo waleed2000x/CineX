@@ -7,6 +7,7 @@ import DarkModeIcon from "@mui/icons-material/DarkMode";
 import { IconButton, TextField, Typography } from "@mui/material";
 import WideSubScreen from "./WideSubScreen";
 import { NavLink } from "react-router-dom";
+
 export default function WideScreen() {
   const { theme, setTheme } = useContext(ThemeContext);
   console.log(theme);
