@@ -17,7 +17,12 @@ export default function WideScreen() {
   };
   return (
     <>
-      <div className="wideScreenParent">
+      <div
+        className="wideScreenParent"
+        style={{
+          backgroundColor: `${theme === "light" ? "#ffffff" : "#000000"}`,
+        }}
+      >
         <div className="titleAppbar">
           <LogoLottie />
           <NavLink to="/">

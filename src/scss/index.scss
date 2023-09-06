@@ -24,11 +24,11 @@
 // }
 .app {
   min-height: 100vh;
-  background-color: #0c0c0c;
+  background-color: #181818;
 }
 .lightApp {
   min-height: 100vh;
-  background-color: #f5f5f5;
+  background-color: rgba(244, 246, 248);
 }
 
 // VARIABLES
@@ -43,7 +43,6 @@ $red: #aa1004;
   backdrop-filter: blur(14px);
   border-radius: 5px;
   overflow: hidden;
-  margin: 0px 5px 5px 5px;
   border: 2px solid rgba(0, 0, 0, 0.1);
   .titleAppbar {
     width: 20%;
@@ -122,9 +121,16 @@ $red: #aa1004;
     min-height: 60vh;
     overflow: hidden;
     .imageFirstSight {
+      position: relative;
       width: 100%;
       & img {
         width: 100%;
+      }
+      .videoButtons {
+        position: absolute;
+        top: 50%;
+        bottom: 50%;
+        right: 10px;
       }
     }
   }

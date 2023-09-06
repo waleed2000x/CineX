@@ -1,10 +1,19 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
+import MEG2 from "../media/MEG2.mp4";
+import { Button, IconButton } from "@mui/material";
+import VolumeUpIcon from "@mui/icons-material/VolumeUp";
+import VolumeOffIcon from "@mui/icons-material/VolumeOff";
+import PlayCircleOutlineIcon from "@mui/icons-material/PlayCircleOutline";
+import PauseCircleOutlineIcon from "@mui/icons-material/PauseCircleOutline";
+
 export default function Popular() {
   const [popularMovies, setPopularMovies] = useState([]);
   const [isHovered, setIsHovered] = useState(false);
   const [hoveredImage, setHoveredImage] = useState(null);
+  const [isMuted, setIsMuted] = useState(false);
+  const [isPlaying, setIsPlaying] = useState(true); // State to track play/pause status
 
   useEffect(() => {
     const options = {
@@ -24,6 +33,7 @@ export default function Popular() {
         console.error(error);
       });
   }, []);
+
   const handleImageHover = (title) => {
     setIsHovered(true);
     setHoveredImage(title);
@@ -33,20 +43,76 @@ export default function Popular() {
     setIsHovered(false);
     setHoveredImage(null);
   };
+
+  const handleToggleMute = () => {
+    setIsMuted(!isMuted); // Toggle mute status
+  };
+
+  const handleTogglePlayPause = () => {
+    setIsPlaying(!isPlaying); // Toggle play/pause status
+    const video = document.getElementById("video"); // Get the video element
+    if (isPlaying) {
+      video.pause(); // Pause the video
+    } else {
+      video.play(); // Play the video
+    }
+  };
+
   const mainShow = popularMovies[4];
   console.log(mainShow);
+
   return (
     <div className="mainParent">
       {mainShow && (
         <div className="popularFirstSight">
-          <motion.div
-            className="imageFirstSight"
-            whileHover={{ scale: 1.1, transition: { duration: 2 } }}
-          >
-            {/* <video /> */}
-            <img
-              src={`https://image.tmdb.org/t/p/w500/${mainShow.backdrop_path}`}
-            />
+          <motion.div className="imageFirstSight">
+            <video
+              id="video"
+              width="100%"
+              height="100%"
+              loop
+              autoPlay
+              muted={isMuted}
+            >
+              <source src={MEG2} type="video/mp4" />
+              Your browser does not support the video tag.
+            </video>
+            <div className="videoButtons">
+              <IconButton onClick={handleTogglePlayPause}>
+                {isPlaying ? (
+                  <PauseCircleOutlineIcon
+                    style={{
+                      fontSize: "70px",
+                      color: "white",
+                    }}
+                  />
+                ) : (
+                  <PlayCircleOutlineIcon
+                    style={{
+                      fontSize: "70px",
+                      color: "white",
+                    }}
+                  />
+                )}
+              </IconButton>
+              <IconButton onClick={handleToggleMute}>
+                {isMuted ? (
+                  <VolumeOffIcon
+                    style={{
+                      fontSize: "70px",
+                      color: "white",
+                    }}
+                  />
+                ) : (
+                  <VolumeUpIcon
+                    style={{
+                      fontSize: "70px",
+                      color: "white",
+                    }}
+                  />
+                )}
+              </IconButton>
+            </div>
           </motion.div>
         </div>
       )}
