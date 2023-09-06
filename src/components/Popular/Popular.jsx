@@ -1,7 +1,7 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
-import MEG2 from "../media/MEG2.mp4";
+import Equalizer from "../media/Equalizer.mp4";
 import { Button, IconButton } from "@mui/material";
 import VolumeUpIcon from "@mui/icons-material/VolumeUp";
 import VolumeOffIcon from "@mui/icons-material/VolumeOff";
@@ -74,7 +74,7 @@ export default function Popular() {
               autoPlay
               muted={isMuted}
             >
-              <source src={MEG2} type="video/mp4" />
+              <source src={Equalizer} type="video/mp4" />
               Your browser does not support the video tag.
             </video>
             <div className="videoButtons">
@@ -82,14 +82,14 @@ export default function Popular() {
                 {isPlaying ? (
                   <PauseCircleOutlineIcon
                     style={{
-                      fontSize: "70px",
+                      fontSize: "50px",
                       color: "white",
                     }}
                   />
                 ) : (
                   <PlayCircleOutlineIcon
                     style={{
-                      fontSize: "70px",
+                      fontSize: "50px",
                       color: "white",
                     }}
                   />
@@ -99,14 +99,14 @@ export default function Popular() {
                 {isMuted ? (
                   <VolumeOffIcon
                     style={{
-                      fontSize: "70px",
+                      fontSize: "50px",
                       color: "white",
                     }}
                   />
                 ) : (
                   <VolumeUpIcon
                     style={{
-                      fontSize: "70px",
+                      fontSize: "50px",
                       color: "white",
                     }}
                   />
