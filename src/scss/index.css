@@ -112,11 +112,12 @@
 .mainParent .popularFirstSight .imageFirstSight {
   position: relative;
   width: 100%;
+  cursor: pointer;
 }
 .mainParent .popularFirstSight .imageFirstSight .shader {
   position: absolute;
   bottom: 0px;
-  height: 60%;
+  height: 100%;
   width: 100%;
   z-index: 1;
   background: linear-gradient(to bottom, rgba(0, 0, 0, 0), #181818);
@@ -128,12 +129,25 @@
 }
 .mainParent .popularFirstSight .imageFirstSight .detailBox {
   display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
   height: 50%;
   width: 70%;
   position: absolute;
   bottom: 0px;
-  left: 0px;
+  left: 50px;
   z-index: 1;
+}
+.mainParent .popularFirstSight .imageFirstSight .detailBox h6 {
+  width: -moz-max-content;
+  width: max-content;
+  margin-left: 10px;
+}
+.mainParent .popularFirstSight .imageFirstSight .detailBox h6 span {
+  margin-left: 5px;
+  border-radius: 3px;
+  padding: 5px;
+  background-color: rgba(255, 255, 255, 0.3);
 }
 .mainParent .popularFirstSight .imageFirstSight .videoButtons {
   display: flex;

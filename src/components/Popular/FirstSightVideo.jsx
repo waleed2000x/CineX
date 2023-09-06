@@ -5,11 +5,9 @@ import VolumeUpIcon from "@mui/icons-material/VolumeUp";
 import VolumeOffIcon from "@mui/icons-material/VolumeOff";
 import PlayCircleOutlineIcon from "@mui/icons-material/PlayCircleOutline";
 import PauseCircleOutlineIcon from "@mui/icons-material/PauseCircleOutline";
-import { useContext, useState } from "react";
-import { ThemeContext } from "../themeContext/ThemeContext";
+import { useState } from "react";
 
 export default function FirstSightVideo() {
-  const { theme } = useContext(ThemeContext);
   const [isMuted, setIsMuted] = useState(false);
   const [isPlaying, setIsPlaying] = useState(true);
   const handleToggleMute = () => {
@@ -41,9 +39,33 @@ export default function FirstSightVideo() {
           Your browser does not support the video tag.
         </video>
         <div className="detailBox">
-          <Typography variant="h1" fontFamily={"inherit"} color={"white"}>
+          <Typography
+            variant="h2"
+            fontFamily={"inherit"}
+            color={"white"}
+            fontWeight={"600"}
+          >
             The Equalizer 3
           </Typography>
+          {!isPlaying && (
+            <>
+              <Typography
+                variant="p"
+                marginLeft={"10px"}
+                fontFamily={"inherit"}
+                color={"white"}
+              >
+                Since giving up his life as a government assassin, Robert McCall
+                finds solace in serving justice on behalf of the oppressed. Now
+                living in Southern Italy, he soon discovers his new friends are
+                under the control of local crime bosses. As events turn deadly,
+                McCall becomes their protector by taking on the mafia.
+              </Typography>
+              <Typography variant="h6" color={"white"} fontFamily={"inherit"}>
+                Rated :<span>16+</span>
+              </Typography>
+            </>
+          )}
         </div>
         <div className="videoButtons">
           <IconButton onClick={handleTogglePlayPause}>
