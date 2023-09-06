@@ -107,7 +107,6 @@
   display: flex;
   justify-content: space-evenly;
   width: 60%;
-  background-color: rgba(0, 0, 0, 0.05);
   border: 2px solid rgba(0, 0, 0, 0.1);
   border-radius: 3px;
 }
@@ -121,15 +120,15 @@
 }
 .mainParent .popularFirstSight {
   display: flex;
-  margin-top: 40px;
   width: 90%;
   min-height: 60vh;
-  background: rgba(255, 255, 255, 0.15);
-  -webkit-backdrop-filter: blur(10px);
-          backdrop-filter: blur(10px);
-  border-radius: 10px;
-  padding: 20px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+.mainParent .popularFirstSight .imageFirstSight {
+  width: 100%;
+}
+.mainParent .popularFirstSight .imageFirstSight img {
+  width: 100%;
 }
 
 .popularParent {

@@ -9,7 +9,16 @@ export default function WideSubScreen() {
 
   return (
     <div className="subBarWidescreen">
-      <div className="subCenter">
+      <div
+        className="subCenter"
+        style={{
+          backgroundColor: `${
+            theme === "light"
+              ? "rgba(255, 255, 255, 0.5)"
+              : "rgba(0, 0, 0, 0.5)"
+          }`,
+        }}
+      >
         <NavLink to="/popular">
           <Button variant="text" size="small" color="error">
             <Typography

@@ -138,7 +138,6 @@ $red: #aa1004;
     display: flex;
     justify-content: space-evenly;
     width: 60%;
-    background-color: rgba(0, 0, 0, 0.05);
     border: 2px solid rgba(0, 0, 0, 0.1);
     border-radius: 3px;
   }
@@ -151,14 +150,15 @@ $red: #aa1004;
   width: 100%;
   .popularFirstSight {
     display: flex;
-    margin-top: 40px;
     width: 90%;
     min-height: 60vh;
-    background: rgba(255, 255, 255, 0.15);
-    backdrop-filter: blur(10px);
-    border-radius: 10px;
-    padding: 20px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    .imageFirstSight {
+      width: 100%;
+      & img {
+        width: 100%;
+      }
+    }
   }
 }
 .popularParent {

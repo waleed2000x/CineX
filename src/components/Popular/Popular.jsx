@@ -1,6 +1,6 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
-
+import { motion } from "framer-motion";
 export default function Popular() {
   const [popularMovies, setPopularMovies] = useState([]);
   const [isHovered, setIsHovered] = useState(false);
@@ -33,15 +33,22 @@ export default function Popular() {
     setIsHovered(false);
     setHoveredImage(null);
   };
-  const mainShow = popularMovies[3];
-  //   console.log(mainShow);
+  const mainShow = popularMovies[4];
+  console.log(mainShow);
   return (
     <div className="mainParent">
-      <div className="popularFirstSight">
-        <img
-          src={`https://image.tmdb.org/t/p/w500/${mainShow.backdrop_path}`}
-        />
-      </div>
+      {mainShow && (
+        <div className="popularFirstSight">
+          <motion.div
+            className="imageFirstSight"
+            whileHover={{ scale: 1.1, transition: { duration: 2 } }}
+          >
+            <img
+              src={`https://image.tmdb.org/t/p/w500/${mainShow.backdrop_path}`}
+            />
+          </motion.div>
+        </div>
+      )}
       <div className="popularParent">
         <div className="popularMainImage">
           {popularMovies.map((movie, i) => {
