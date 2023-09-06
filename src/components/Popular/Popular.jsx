@@ -7,13 +7,13 @@ import VolumeUpIcon from "@mui/icons-material/VolumeUp";
 import VolumeOffIcon from "@mui/icons-material/VolumeOff";
 import PlayCircleOutlineIcon from "@mui/icons-material/PlayCircleOutline";
 import PauseCircleOutlineIcon from "@mui/icons-material/PauseCircleOutline";
-
+import thumb from "../media/thumb.jpg";
 export default function Popular() {
   const [popularMovies, setPopularMovies] = useState([]);
   const [isHovered, setIsHovered] = useState(false);
   const [hoveredImage, setHoveredImage] = useState(null);
   const [isMuted, setIsMuted] = useState(false);
-  const [isPlaying, setIsPlaying] = useState(true); // State to track play/pause status
+  const [isPlaying, setIsPlaying] = useState(true);
 
   useEffect(() => {
     const options = {
@@ -45,16 +45,16 @@ export default function Popular() {
   };
 
   const handleToggleMute = () => {
-    setIsMuted(!isMuted); // Toggle mute status
+    setIsMuted(!isMuted);
   };
 
   const handleTogglePlayPause = () => {
-    setIsPlaying(!isPlaying); // Toggle play/pause status
-    const video = document.getElementById("video"); // Get the video element
+    setIsPlaying(!isPlaying);
+    const video = document.getElementById("video");
     if (isPlaying) {
-      video.pause(); // Pause the video
+      video.pause();
     } else {
-      video.play(); // Play the video
+      video.play();
     }
   };
 
@@ -66,6 +66,7 @@ export default function Popular() {
       {mainShow && (
         <div className="popularFirstSight">
           <motion.div className="imageFirstSight">
+            <div className="shader"></div>
             <video
               id="video"
               width="100%"
@@ -73,6 +74,7 @@ export default function Popular() {
               loop
               autoPlay
               muted={isMuted}
+              //   poster={thumb}
             >
               <source src={Equalizer} type="video/mp4" />
               Your browser does not support the video tag.
