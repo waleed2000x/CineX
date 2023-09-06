@@ -175,7 +175,7 @@
 
 .popularMainImage {
   display: flex;
-  animation: scrollImages 80s linear infinite;
+  animation: scrollImages 150s linear infinite;
   transform: translateX(-100%);
 }
 
@@ -188,6 +188,10 @@
 }
 .imageContainer:hover .imageTitle {
   opacity: 1;
+  font-size: 15px;
+}
+.imageContainer img {
+  height: 200px;
 }
 
 .imageTitle {

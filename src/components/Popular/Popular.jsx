@@ -41,7 +41,7 @@ export default function Popular() {
 
   return (
     <div className="mainParent">
-      {mainShow && <FirstSightVideo />}
+      <FirstSightVideo />
       <div className="popularParent">
         <div className="popularMainImage">
           {popularMovies.map((movie, i) => {
@@ -53,9 +53,7 @@ export default function Popular() {
                 onMouseLeave={handleImageLeave}
               >
                 <div>
-                  <p className={`imageTitle ${isHovered ? "showTitle" : ""}`}>
-                    {hoveredImage}
-                  </p>
+                  <p className="imageTitle">{hoveredImage}</p>
                   <img
                     style={{ borderRadius: "15px" }}
                     src={`https://image.tmdb.org/t/p/w500/${movie.backdrop_path}`}

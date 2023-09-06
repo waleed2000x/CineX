@@ -185,7 +185,7 @@ $red: #aa1004;
 
 .popularMainImage {
   display: flex;
-  animation: scrollImages 80s linear infinite;
+  animation: scrollImages 150s linear infinite;
   transform: translateX(-100%);
 }
 
@@ -198,7 +198,11 @@ $red: #aa1004;
   &:hover {
     .imageTitle {
       opacity: 1;
+      font-size: 15px;
     }
+  }
+  & img {
+    height: 200px;
   }
 }
 
