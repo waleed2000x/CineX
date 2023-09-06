@@ -126,6 +126,15 @@
   height: 90vh;
   scale: 1.4;
 }
+.mainParent .popularFirstSight .imageFirstSight .detailBox {
+  display: flex;
+  height: 50%;
+  width: 70%;
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  z-index: 1;
+}
 .mainParent .popularFirstSight .imageFirstSight .videoButtons {
   display: flex;
   flex-direction: column;

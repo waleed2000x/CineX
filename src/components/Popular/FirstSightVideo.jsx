@@ -1,14 +1,15 @@
 import { motion } from "framer-motion";
 import Equalizer from "../media/Equalizer.mp4";
-import { Button, IconButton } from "@mui/material";
+import { IconButton, Typography } from "@mui/material";
 import VolumeUpIcon from "@mui/icons-material/VolumeUp";
 import VolumeOffIcon from "@mui/icons-material/VolumeOff";
 import PlayCircleOutlineIcon from "@mui/icons-material/PlayCircleOutline";
 import PauseCircleOutlineIcon from "@mui/icons-material/PauseCircleOutline";
-import thumb from "../media/thumb.jpg";
-import { useState } from "react";
+import { useContext, useState } from "react";
+import { ThemeContext } from "../themeContext/ThemeContext";
 
 export default function FirstSightVideo() {
+  const { theme } = useContext(ThemeContext);
   const [isMuted, setIsMuted] = useState(false);
   const [isPlaying, setIsPlaying] = useState(true);
   const handleToggleMute = () => {
@@ -35,11 +36,15 @@ export default function FirstSightVideo() {
           loop
           autoPlay
           muted={isMuted}
-          //   poster={thumb}
         >
           <source src={Equalizer} type="video/mp4" />
           Your browser does not support the video tag.
         </video>
+        <div className="detailBox">
+          <Typography variant="h1" fontFamily={"inherit"} color={"white"}>
+            The Equalizer 3
+          </Typography>
+        </div>
         <div className="videoButtons">
           <IconButton onClick={handleTogglePlayPause}>
             {isPlaying ? (
