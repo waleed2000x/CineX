@@ -1,5 +1,6 @@
 import Appbar from "../Appbar/Appbar";
 import { Outlet } from "react-router-dom";
+import Location from "../Location/Location";
 
 export default function Home() {
   // const options = {
@@ -45,6 +46,7 @@ export default function Home() {
     <div>
       <Appbar />
       <Outlet />
+      <Location />
     </div>
   );
 }

@@ -21,7 +21,10 @@
 }
 
 .wideScreenParent {
-  position: relative;
+  position: fixed;
+  top: 0px;
+  z-index: 3;
+  width: 100%;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -96,6 +99,7 @@
 }
 
 .mainParent {
+  margin-top: 100px;
   z-index: 1;
   display: flex;
   flex-direction: column;
@@ -114,13 +118,21 @@
   width: 100%;
   cursor: pointer;
 }
-.mainParent .popularFirstSight .imageFirstSight .shader {
+.mainParent .popularFirstSight .imageFirstSight .shaderDark {
   position: absolute;
   bottom: 0px;
   height: 100%;
   width: 100%;
   z-index: 1;
   background: linear-gradient(to bottom, rgba(0, 0, 0, 0), #181818);
+}
+.mainParent .popularFirstSight .imageFirstSight .shaderLight {
+  position: absolute;
+  bottom: 0px;
+  height: 30%;
+  width: 100%;
+  z-index: 1;
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0), rgb(244, 246, 248));
 }
 .mainParent .popularFirstSight .imageFirstSight video {
   width: 100%;
@@ -131,7 +143,7 @@
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
-  height: 50%;
+  height: 30%;
   width: 70%;
   position: absolute;
   bottom: 0px;

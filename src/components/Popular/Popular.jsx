@@ -4,7 +4,6 @@ import FirstSightVideo from "./FirstSightVideo";
 
 export default function Popular() {
   const [popularMovies, setPopularMovies] = useState([]);
-  const [isHovered, setIsHovered] = useState(false);
   const [hoveredImage, setHoveredImage] = useState(null);
 
   useEffect(() => {
@@ -27,17 +26,12 @@ export default function Popular() {
   }, []);
 
   const handleImageHover = (title) => {
-    setIsHovered(true);
     setHoveredImage(title);
   };
 
   const handleImageLeave = () => {
-    setIsHovered(false);
     setHoveredImage(null);
   };
-
-  const mainShow = popularMovies[4];
-  console.log(mainShow);
 
   return (
     <div className="mainParent">

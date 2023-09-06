@@ -5,9 +5,11 @@ import VolumeUpIcon from "@mui/icons-material/VolumeUp";
 import VolumeOffIcon from "@mui/icons-material/VolumeOff";
 import PlayCircleOutlineIcon from "@mui/icons-material/PlayCircleOutline";
 import PauseCircleOutlineIcon from "@mui/icons-material/PauseCircleOutline";
-import { useState } from "react";
+import { useContext, useState } from "react";
+import { ThemeContext } from "../themeContext/ThemeContext";
 
 export default function FirstSightVideo() {
+  const { theme } = useContext(ThemeContext);
   const [isMuted, setIsMuted] = useState(false);
   const [isPlaying, setIsPlaying] = useState(true);
   const handleToggleMute = () => {
@@ -26,7 +28,9 @@ export default function FirstSightVideo() {
   return (
     <div className="popularFirstSight">
       <motion.div className="imageFirstSight">
-        <div className="shader"></div>
+        <div
+          className={`${theme === "light" ? "shaderLight" : "shaderDark"}`}
+        ></div>
         <video
           id="video"
           width="100%"
@@ -42,7 +46,7 @@ export default function FirstSightVideo() {
           <Typography
             variant="h2"
             fontFamily={"inherit"}
-            color={"white"}
+            color={`${theme === "light" ? "black" : "white"}`}
             fontWeight={"600"}
           >
             The Equalizer 3
@@ -53,7 +57,7 @@ export default function FirstSightVideo() {
                 variant="p"
                 marginLeft={"10px"}
                 fontFamily={"inherit"}
-                color={"white"}
+                color={`${theme === "light" ? "black" : "white"}`}
               >
                 Since giving up his life as a government assassin, Robert McCall
                 finds solace in serving justice on behalf of the oppressed. Now
@@ -61,7 +65,11 @@ export default function FirstSightVideo() {
                 under the control of local crime bosses. As events turn deadly,
                 McCall becomes their protector by taking on the mafia.
               </Typography>
-              <Typography variant="h6" color={"white"} fontFamily={"inherit"}>
+              <Typography
+                variant="h6"
+                color={`${theme === "light" ? "black" : "white"}`}
+                fontFamily={"inherit"}
+              >
                 Rated :<span>16+</span>
               </Typography>
             </>

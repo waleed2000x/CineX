@@ -33,9 +33,14 @@
 
 // VARIABLES
 $appbarHeight: 100px;
+$themeWhite: rgba(244, 246, 248);
+$themeBlack: #181818;
 $red: #aa1004;
 .wideScreenParent {
-  position: relative;
+  position: fixed;
+  top: 0px;
+  z-index: 3;
+  width: 100%;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -107,6 +112,7 @@ $red: #aa1004;
   }
 }
 .mainParent {
+  margin-top: $appbarHeight;
   z-index: 1;
   display: flex;
   flex-direction: column;
@@ -122,13 +128,25 @@ $red: #aa1004;
       position: relative;
       width: 100%;
       cursor: pointer;
-      .shader {
+      .shaderDark {
         position: absolute;
         bottom: 0px;
         height: 100%;
         width: 100%;
         z-index: 1;
-        background: linear-gradient(to bottom, rgba(0, 0, 0, 0), #181818);
+        background: linear-gradient(to bottom, rgba(0, 0, 0, 0), $themeBlack);
+      }
+      .shaderLight {
+        position: absolute;
+        bottom: 0px;
+        height: 30%;
+        width: 100%;
+        z-index: 1;
+        background: linear-gradient(
+          to bottom,
+          rgba(255, 255, 255, 0),
+          $themeWhite
+        );
       }
       & video {
         width: 100%;
@@ -139,7 +157,7 @@ $red: #aa1004;
         display: flex;
         flex-direction: column;
         justify-content: space-evenly;
-        height: 50%;
+        height: 30%;
         width: 70%;
         position: absolute;
         bottom: 0px;
