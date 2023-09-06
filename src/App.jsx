@@ -9,6 +9,16 @@ function App() {
   const [theme, setTheme] = useState(themes.dark);
   return (
     <ThemeContext.Provider value={{ theme, setTheme }}>
+      {/* {theme === "dark" ? (
+        <img
+          src={img}
+          style={{
+            position: "fixed",
+            top: "0px",
+            right: "0px",
+          }}
+        />
+      ) : null} */}
       <div className={`app ${theme === "light" ? "lightApp" : null}`}>
         <Routes>
           <Route path="/" element={<Home />}>

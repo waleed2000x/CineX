@@ -18,7 +18,6 @@ export default function Popular() {
     axios
       .request(options)
       .then(function (response) {
-        console.log(response.data.results);
         setPopularMovies(response.data.results);
       })
       .catch(function (error) {
@@ -34,9 +33,15 @@ export default function Popular() {
     setIsHovered(false);
     setHoveredImage(null);
   };
-
+  const mainShow = popularMovies[3];
+  //   console.log(mainShow);
   return (
     <div className="mainParent">
+      <div className="popularFirstSight">
+        <img
+          src={`https://image.tmdb.org/t/p/w500/${mainShow.backdrop_path}`}
+        />
+      </div>
       <div className="popularParent">
         <div className="popularMainImage">
           {popularMovies.map((movie, i) => {
@@ -52,6 +57,7 @@ export default function Popular() {
                     {hoveredImage}
                   </p>
                   <img
+                    style={{ borderRadius: "15px" }}
                     src={`https://image.tmdb.org/t/p/w500/${movie.backdrop_path}`}
                     alt={movie.original_title}
                   />
