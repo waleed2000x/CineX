@@ -17,7 +17,7 @@
 import React, { useEffect, useState } from "react";
 
 export default function Location() {
-  // Working properly done
+  // Working properly done good
 
   const [location, setLocation] = useState(null);
 
