@@ -10,18 +10,6 @@
   margin: 0px;
   padding: 0px;
 }
-// .BGIMAGE {
-//   position: fixed;
-//   top: 0px;
-//   width: 100%;
-//   height: 100%;
-//   z-index: 0;
-//   & img {
-//     width: 100%;
-//     height: 100%;
-//     object-fit: cover;
-//   }
-// }
 .app {
   min-height: 100vh;
   background-color: #181818;
@@ -217,17 +205,31 @@ $red: #aa1004;
     .imageContainer {
       border-radius: 5px;
       position: relative;
-      .imageShader {
-        position: absolute;
-        width: 100%;
-        height: 100%;
+      .imageShaderDark {
         background: linear-gradient(
           to bottom,
           rgba(0, 0, 0, 0),
           rgba(0, 0, 0, 1)
         );
+      }
+      .imageShaderLight {
+        background: linear-gradient(
+          to bottom,
+          rgba(255, 255, 255, 0),
+          rgba(244, 246, 248)
+        );
+      }
+      .imageShader {
+        position: absolute;
+        width: 100%;
+        height: 100%;
         opacity: 0;
         transition: opacity 0.3s ease;
+        .movieImageTitle {
+          position: absolute;
+          bottom: 0px;
+          left: 5px;
+        }
       }
       &:hover .imageShader {
         opacity: 1;
@@ -257,6 +259,7 @@ $red: #aa1004;
         left: 5px;
         width: 100%;
         font-weight: 500;
+        color: $themeWhite;
       }
     }
   }

@@ -42,7 +42,7 @@ export default function WideSubScreen() {
         </Button>
         <Button variant="text" size="small" color="error">
           <Typography variant="p" color={theme === "light" ? "black" : "white"}>
-            Comedy
+            Profile
           </Typography>
         </Button>
       </div>

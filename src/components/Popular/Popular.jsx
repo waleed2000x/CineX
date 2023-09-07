@@ -46,7 +46,11 @@ export default function Popular() {
                 key={i}
                 className="imageContainer"
               >
-                <div className="imageShader">
+                <div
+                  className={` imageShader ${
+                    theme === "light" ? "imageShaderLight" : "imageShaderDark"
+                  }`}
+                >
                   <Button
                     className="watch"
                     variant="filled"
@@ -64,13 +68,14 @@ export default function Popular() {
                   >
                     <InfoOutlinedIcon />
                   </IconButton>
-                  <p
-                    style={{
-                      color: `${theme === "light" ? "black" : "white"}`,
-                    }}
-                  >
-                    {movie.original_title}
-                  </p>
+                  <div className="movieImageTitle">
+                    <Typography
+                      variant="p"
+                      color={`${theme === "light" ? "black" : "white"}`}
+                    >
+                      {movie.original_title}
+                    </Typography>
+                  </div>
                 </div>
                 <img
                   src={`https://image.tmdb.org/t/p/w500/${movie.backdrop_path}`}
