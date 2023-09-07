@@ -19,6 +19,16 @@ export default function WideSubScreen() {
           }`,
         }}
       >
+        <NavLink to="/">
+          <Button variant="text" size="small" color="error">
+            <Typography
+              variant="p"
+              color={theme === "light" ? "black" : "white"}
+            >
+              Home
+            </Typography>
+          </Button>
+        </NavLink>
         <NavLink to="/popular">
           <Button variant="text" size="small" color="error">
             <Typography
