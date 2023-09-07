@@ -21,7 +21,7 @@ const Location = () => {
       {loading ? (
         <div className="locationSkeleton">
           <SkeletonTheme
-            baseColor={`${theme === "light" ? "#d9dadb" : "#acacad"}`}
+            baseColor={`${theme === "light" ? "#d9dadb" : "#474747"}`}
           >
             <Skeleton
               width={"80%"}

@@ -162,6 +162,33 @@ $red: #aa1004;
           }
         }
       }
+      .landingButtonPlay {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 2;
+        @keyframes colorGradient {
+          0% {
+            color: white;
+          }
+          50% {
+            color: rgb(44, 42, 42);
+          }
+          100% {
+            color: white;
+          }
+        }
+        & svg {
+          font-size: 150px;
+          // color: white;
+          animation: colorGradient 3s linear infinite;
+        }
+        .landingPlayer {
+          width: 99vw;
+          height: 80vh;
+        }
+      }
       .videoButtons {
         display: flex;
         flex-direction: column;
@@ -171,6 +198,7 @@ $red: #aa1004;
         bottom: 50px;
         right: 10px;
         z-index: 2;
+
         & svg {
           opacity: 0.3;
 
@@ -345,4 +373,8 @@ $red: #aa1004;
       width: 40%;
     }
   }
+}
+// Landing
+.landingParent {
+  margin-top: $appbarHeight;
 }

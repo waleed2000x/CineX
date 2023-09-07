@@ -2,9 +2,11 @@ import { useContext } from "react";
 import FirstSightVideo from "./FirstSightVideo";
 import InfoOutlinedIcon from "@mui/icons-material/InfoOutlined";
 import useFetchAPI from "../useFetch/UseFetchAPI";
+import Equalizer from "../media/Equalizer.mp4";
 import { Button, IconButton, Typography } from "@mui/material";
 import { ThemeContext } from "../themeContext/ThemeContext";
 import { motion } from "framer-motion";
+import PopularSkeleton from "./PopularSkeleton";
 export default function Popular() {
   const { theme } = useContext(ThemeContext);
   const {
@@ -17,7 +19,14 @@ export default function Popular() {
   console.log(popularMovies);
   return (
     <div className="mainParentPopular">
-      <FirstSightVideo />
+      <FirstSightVideo
+        videoLink={Equalizer}
+        details={true}
+        name={"The Equalizer 3"}
+        description={
+          "Since giving up his life as a government assassin, Robert McCall finds solace in serving justice on behalf of the oppressed. Now living in Southern Italy, he soon discovers his new friends are under the control of local crime bosses. As events turn deadly, McCall becomes their protector by taking on the mafia."
+        }
+      />
       <div className="popularParent">
         <div className="PopularTitle">
           <Typography
@@ -33,7 +42,7 @@ export default function Popular() {
         </div>
         <div className="popularMoviesList">
           {isLoading ? (
-            <p>Loading...</p>
+            <PopularSkeleton />
           ) : error ? (
             <p>Error: {error.message}</p>
           ) : popularMovies !== null ? (
