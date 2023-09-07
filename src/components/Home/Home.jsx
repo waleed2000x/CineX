@@ -42,6 +42,29 @@ export default function Home() {
   // }, []);
 
   // console.log(popularMovies);
+  //////
+  //   import { Swiper, SwiperSlide } from "swiper/react";
+  // import { FreeMode } from "swiper/modules";
+  // import "swiper/css/effect-fade";
+  // import "swiper/css";
+  // import "swiper/css/free-mode";
+  // <Swiper
+  //           slidesPerView={3}
+  //           spaceBetween={0}
+  //           loop={true}
+  //           pagination={{
+  //             clickable: true,
+  //           }}
+  //           modules={[FreeMode]}
+  //           className="mySwiper"
+  //         >
+  //           <SwiperSlide>
+  //             <img
+  //               src={`https://image.tmdb.org/t/p/w500/${movie.backdrop_path}`}
+  //             />
+  //             <p>hello</p>
+  //           </SwiperSlide>
+  //         </Swiper>
   return (
     <div>
       <Appbar />

@@ -1,29 +1,16 @@
-import axios from "axios";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import FirstSightVideo from "./FirstSightVideo";
+import useFetchAPI from "../useFetch/UseFetchAPI";
 
 export default function Popular() {
-  const [popularMovies, setPopularMovies] = useState([]);
   const [hoveredImage, setHoveredImage] = useState(null);
-
-  useEffect(() => {
-    const options = {
-      method: "GET",
-      url: "https://api.themoviedb.org/3/movie/popular",
-      params: {
-        api_key: "573180add55876cdd18911a65315f1b3",
-      },
-    };
-
-    axios
-      .request(options)
-      .then(function (response) {
-        setPopularMovies(response.data.results);
-      })
-      .catch(function (error) {
-        console.error(error);
-      });
-  }, []);
+  const {
+    data: popularMovies,
+    isLoading,
+    error,
+  } = useFetchAPI("https://api.themoviedb.org/3/movie/popular", {
+    api_key: "573180add55876cdd18911a65315f1b3",
+  });
 
   const handleImageHover = (title) => {
     setHoveredImage(title);
@@ -36,10 +23,15 @@ export default function Popular() {
   return (
     <div className="mainParent">
       <FirstSightVideo />
+
       <div className="popularParent">
         <div className="popularMainImage">
-          {popularMovies.map((movie, i) => {
-            return (
+          {isLoading ? (
+            <p>Loading...</p>
+          ) : error ? (
+            <p>Error: {error.message}</p>
+          ) : popularMovies !== null ? (
+            popularMovies.map((movie, i) => (
               <div
                 key={i}
                 className="imageContainer"
@@ -55,18 +47,26 @@ export default function Popular() {
                   />
                 </div>
               </div>
-            );
-          })}
+            ))
+          ) : (
+            <p>No data available</p>
+          )}
         </div>
         <div className="polularMovies">
-          {popularMovies.map((movie, i) => {
-            return (
+          {isLoading ? (
+            <p>Loading...</p>
+          ) : error ? (
+            <p>Error: {error.message}</p>
+          ) : popularMovies !== null ? (
+            popularMovies.map((movie, i) => (
               <img
                 key={i}
                 src={`https://image.tmdb.org/t/p/w500/${movie.backdrop_path}`}
               />
-            );
-          })}
+            ))
+          ) : (
+            <p>No data available</p>
+          )}
         </div>
       </div>
     </div>
