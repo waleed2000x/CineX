@@ -111,7 +111,7 @@ $red: #aa1004;
     border-radius: 3px;
   }
 }
-.mainParent {
+.mainParentPopular {
   margin-top: $appbarHeight;
   z-index: 1;
   display: flex;
@@ -139,7 +139,7 @@ $red: #aa1004;
       .shaderLight {
         position: absolute;
         bottom: 0px;
-        height: 30%;
+        height: 40%;
         width: 100%;
         z-index: 1;
         background: linear-gradient(
@@ -195,16 +195,31 @@ $red: #aa1004;
   }
 }
 .popularParent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   overflow: hidden;
-  width: 90%;
+  width: 95%;
   position: relative;
   z-index: 0;
-}
-
-.popularMainImage {
-  display: flex;
-  animation: scrollImages 150s linear infinite;
-  transform: translateX(-100%);
+  .popularMoviesList {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 100%;
+    .imageContainer {
+      & img {
+        margin: 20px 0px;
+        object-fit: contain;
+        border-radius: 5px;
+      }
+    }
+  }
+  .popularImageSlider {
+    display: flex;
+    animation: scrollImages 550s linear infinite;
+    transform: translateX(-100%);
+  }
 }
 
 .imageContainer {
@@ -223,7 +238,7 @@ $red: #aa1004;
     height: 200px;
   }
 }
-// polularMovies
+
 .imageTitle {
   position: absolute;
   bottom: 10px;
