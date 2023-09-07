@@ -69,7 +69,7 @@ export default function Home() {
     <div>
       <Appbar />
       <Outlet />
-      <Location />
+      {/* <Location /> */}
     </div>
   );
 }
