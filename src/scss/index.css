@@ -129,7 +129,7 @@
 .mainParentPopular .popularFirstSight .imageFirstSight .shaderLight {
   position: absolute;
   bottom: 0px;
-  height: 30%;
+  height: 40%;
   width: 100%;
   z-index: 1;
   background: linear-gradient(to bottom, rgba(255, 255, 255, 0), rgb(244, 246, 248));

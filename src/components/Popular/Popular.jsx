@@ -17,7 +17,6 @@ export default function Popular() {
       <FirstSightVideo />
 
       <div className="popularParent">
-        <SlidingBelt />
         <div className="popularMoviesList">
           {isLoading ? (
             <p>Loading...</p>
