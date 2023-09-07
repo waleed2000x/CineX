@@ -303,7 +303,16 @@
   min-height: 10vh;
 }
 .profileParent .profileTitle {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   margin-top: 50px;
+}
+.profileParent .profileTitle .profileLottie {
+  width: 20%;
+  height: 20%;
+  border-radius: 50%;
+  overflow: hidden;
 }
 .profileParent .xCftiply-56 {
   display: flex;
@@ -315,4 +324,9 @@
 .profileParent .xCftiply-56 .xCftiply-56-info {
   display: flex;
   flex-direction: column;
+}
+.profileParent .xCftiply-56 .locationSkeleton {
+  display: flex;
+  flex-direction: column;
+  width: 40%;
 }/*# sourceMappingURL=index.css.map */

@@ -318,6 +318,15 @@ $red: #aa1004;
   width: 100%;
   min-height: 10vh;
   .profileTitle {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .profileLottie {
+      width: 20%;
+      height: 20%;
+      border-radius: 50%;
+      overflow: hidden;
+    }
     margin-top: 50px;
   }
   .xCftiply-56 {
@@ -329,6 +338,11 @@ $red: #aa1004;
     .xCftiply-56-info {
       display: flex;
       flex-direction: column;
+    }
+    .locationSkeleton {
+      display: flex;
+      flex-direction: column;
+      width: 40%;
     }
   }
 }
