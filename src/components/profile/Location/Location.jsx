@@ -2,11 +2,12 @@ import { Typography } from "@mui/material";
 import UseFetch from "../../useFetch/UseFetch";
 import { useContext } from "react";
 import { ThemeContext } from "../../themeContext/ThemeContext";
+import Skeleton, { SkeletonTheme } from "react-loading-skeleton";
 
 const Location = () => {
   const { theme } = useContext(ThemeContext);
   const { data: ipData, loading, error } = UseFetch("http://ip-api.com/json");
-  console.log(ipData);
+
   return (
     <div className="xCftiply-56">
       <Typography
@@ -18,9 +19,36 @@ const Location = () => {
         IP Geolocation Information
       </Typography>
       {loading ? (
-        <p>Loading...</p>
+        <div className="locationSkeleton">
+          <SkeletonTheme
+            baseColor={`${theme === "light" ? "#d9dadb" : "#acacad"}`}
+          >
+            <Skeleton
+              width={"80%"}
+              height={"20px"}
+              style={{ margin: "10px" }}
+            />
+            <Skeleton
+              width={"60%"}
+              height={"20px"}
+              style={{ margin: "10px" }}
+            />
+            <Skeleton
+              width={"40%"}
+              height={"20px"}
+              style={{ margin: "10px" }}
+            />
+            <Skeleton
+              width={"60%"}
+              height={"20px"}
+              style={{ margin: "10px" }}
+            />
+          </SkeletonTheme>
+        </div>
       ) : error ? (
-        <p>Error: {error.message}</p>
+        <Typography variant="p" color={"red"} fontFamily={"inherit"}>
+          Error: {error.message}
+        </Typography>
       ) : (
         <div className="xCftiply-56-info">
           <Typography
@@ -29,7 +57,7 @@ const Location = () => {
             margin={"10px 0px"}
             color={`${theme === "light" ? "black" : "white"}`}
           >
-            Internet Sercive :
+            Internet Service:
             <span style={{ color: "red", marginLeft: "8px" }}>
               {ipData.isp}
             </span>
