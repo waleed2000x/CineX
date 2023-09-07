@@ -182,10 +182,15 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  overflow: hidden;
   width: 95%;
   position: relative;
   z-index: 0;
+}
+.popularParent .PopularTitle {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin: 90px 0px 50px 0px;
 }
 .popularParent .popularMoviesList {
   display: flex;
@@ -193,11 +198,47 @@
   flex-wrap: wrap;
   width: 100%;
 }
+.popularParent .popularMoviesList .imageContainer {
+  border-radius: 5px;
+  position: relative;
+}
+.popularParent .popularMoviesList .imageContainer .imageShader {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgb(0, 0, 0));
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+.popularParent .popularMoviesList .imageContainer:hover .imageShader {
+  opacity: 1;
+}
+.popularParent .popularMoviesList .imageContainer svg {
+  color: rgb(244, 246, 248);
+  font-size: 30px;
+}
 .popularParent .popularMoviesList .imageContainer img {
   margin: 20px 0px;
   -o-object-fit: contain;
      object-fit: contain;
   border-radius: 5px;
+}
+.popularParent .popularMoviesList .imageContainer .infoButton {
+  position: absolute;
+  top: 10%;
+  left: 10px;
+}
+.popularParent .popularMoviesList .imageContainer .watch {
+  position: absolute;
+  top: 10%;
+  right: 0%;
+}
+.popularParent .popularMoviesList .imageContainer p {
+  position: absolute;
+  bottom: 0px;
+  left: 5px;
+  width: 100%;
+  font-weight: 500;
 }
 .popularParent .popularImageSlider {
   display: flex;
