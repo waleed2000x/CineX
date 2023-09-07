@@ -4,6 +4,7 @@ import Home from "./components/Home/Home";
 import { ThemeContext, themes } from "./components/themeContext/ThemeContext";
 import { useState } from "react";
 import Popular from "./components/Popular/Popular";
+import Profile from "./components/profile/Profile";
 
 function App() {
   const [theme, setTheme] = useState(themes.dark);
@@ -13,6 +14,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />}>
             <Route path="/popular" element={<Popular />} />
+            <Route path="/profile" element={<Profile />} />
           </Route>
         </Routes>
       </div>
