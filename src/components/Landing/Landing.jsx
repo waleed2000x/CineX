@@ -4,7 +4,17 @@ import { ThemeContext } from "../themeContext/ThemeContext";
 import FirstSightVideo from "../Popular/FirstSightVideo";
 import Oppenheimer from "../media/Oppenheimer.mp4";
 import OppenheimerImg from "../media/oppenheimerImg.jpg";
+import Slider from "./Slider";
+import useFetchAPI from "../useFetch/UseFetchAPI";
 export default function Landing() {
+  const {
+    data: popularMovies,
+    isLoading,
+    error,
+  } = useFetchAPI("https://api.themoviedb.org/3/movie/popular", {
+    api_key: "573180add55876cdd18911a65315f1b3",
+  });
+  console.log(popularMovies);
   const { theme } = useContext(ThemeContext);
   return (
     <>
@@ -28,6 +38,7 @@ export default function Landing() {
         >
           Landing
         </Typography>
+        <Slider popularMovies={popularMovies} />
       </div>
     </>
   );
