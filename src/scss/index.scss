@@ -376,11 +376,20 @@ $red: #aa1004;
 }
 // SWIPPER JS
 .sliderParent {
-  & img {
-    width: 100%;
-  }
   .swiper {
-    & :hover {
+    display: flex;
+    justify-content: center;
+    margin: 0px 2%;
+  }
+
+  .swiper-slide {
+    position: relative;
+    & img {
+      width: 100%;
+      border-radius: 5px;
+    }
+
+    &:hover {
       .sliderShaderLight {
         position: absolute;
         top: 0px;
@@ -393,6 +402,7 @@ $red: #aa1004;
           rgba(244, 246, 248)
         );
       }
+
       .sliderShaderDark {
         position: absolute;
         top: 0px;
@@ -408,6 +418,7 @@ $red: #aa1004;
     }
   }
 }
+
 // Landing
 .landingParent {
   margin-top: $appbarHeight;

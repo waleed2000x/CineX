@@ -6,13 +6,13 @@ import { FreeMode } from "swiper/modules";
 import { useContext } from "react";
 import { ThemeContext } from "../themeContext/ThemeContext";
 
-export default function Slider({ popularMovies }) {
+export default function Slider({ popularMovies, endpoint }) {
   const { theme } = useContext(ThemeContext);
 
   return (
     <div className="sliderParent">
       <Swiper
-        slidesPerView={3}
+        slidesPerView={4.4}
         spaceBetween={30}
         freeMode={true}
         pagination={{
