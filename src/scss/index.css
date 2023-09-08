@@ -360,7 +360,7 @@
 .sliderParent img {
   width: 100%;
 }
-.sliderParent .sliderShaderLight {
+.sliderParent .swiper :hover .sliderShaderLight {
   position: absolute;
   top: 0px;
   left: 0px;
@@ -368,7 +368,7 @@
   height: 100%;
   background: linear-gradient(to bottom, rgba(255, 255, 255, 0), rgb(244, 246, 248));
 }
-.sliderParent .sliderShaderDark {
+.sliderParent .swiper :hover .sliderShaderDark {
   position: absolute;
   top: 0px;
   left: 0px;

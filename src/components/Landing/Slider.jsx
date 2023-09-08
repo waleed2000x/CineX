@@ -23,7 +23,11 @@ export default function Slider({ popularMovies }) {
       >
         {popularMovies &&
           popularMovies.map((item, index) => (
-            <SwiperSlide key={index} style={{ position: "relative" }}>
+            <SwiperSlide
+              key={index}
+              style={{ position: "relative" }}
+              className="swiper"
+            >
               <div
                 className={`${
                   theme === "light" ? "sliderShaderLight" : "sliderShaderDark"

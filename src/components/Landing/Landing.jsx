@@ -32,8 +32,9 @@ export default function Landing() {
       </div>
       <div className="landingParent">
         <Typography
-          variant="h1"
+          variant="h4"
           fontFamily={"inherit"}
+          textAlign={"center"}
           color={`${theme === "light" ? "black" : "white"}`}
         >
           Landing
