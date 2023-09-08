@@ -1,5 +1,4 @@
 /* eslint-disable react/prop-types */
-import { motion } from "framer-motion";
 import { IconButton, Typography } from "@mui/material";
 import VolumeUpIcon from "@mui/icons-material/VolumeUp";
 import VolumeOffIcon from "@mui/icons-material/VolumeOff";
@@ -14,6 +13,7 @@ export default function FirstSightVideo({
   name,
   description,
   landingVideo,
+  thumbnail,
 }) {
   const { theme } = useContext(ThemeContext);
   const [isMuted, setIsMuted] = useState(false);
@@ -33,7 +33,7 @@ export default function FirstSightVideo({
   };
   return (
     <div className="popularFirstSight">
-      <motion.div className="imageFirstSight">
+      <div className="imageFirstSight">
         <div
           className={`${theme === "light" ? "shaderLight" : "shaderDark"}`}
         ></div>
@@ -44,6 +44,7 @@ export default function FirstSightVideo({
           loop
           autoPlay
           muted={isMuted}
+          poster={thumbnail}
         >
           <source src={videoLink} type="video/mp4" />
           Your browser does not support the video tag.
@@ -132,7 +133,7 @@ export default function FirstSightVideo({
             )}
           </>
         )}
-      </motion.div>
+      </div>
     </div>
   );
 }
