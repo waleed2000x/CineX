@@ -3,6 +3,7 @@ import FirstSightVideo from "./FirstSightVideo";
 import InfoOutlinedIcon from "@mui/icons-material/InfoOutlined";
 import useFetchAPI from "../useFetch/UseFetchAPI";
 import Equalizer from "../media/Equalizer.mp4";
+import EqualizerImg from "../media/EqualizerImg.jpg";
 import { Button, IconButton, Typography } from "@mui/material";
 import { ThemeContext } from "../themeContext/ThemeContext";
 import { motion } from "framer-motion";
@@ -23,6 +24,7 @@ export default function Popular() {
         videoLink={Equalizer}
         details={true}
         name={"The Equalizer 3"}
+        thumbnail={EqualizerImg}
         description={
           "Since giving up his life as a government assassin, Robert McCall finds solace in serving justice on behalf of the oppressed. Now living in Southern Italy, he soon discovers his new friends are under the control of local crime bosses. As events turn deadly, McCall becomes their protector by taking on the mafia."
         }
