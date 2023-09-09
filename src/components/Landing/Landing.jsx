@@ -13,15 +13,18 @@ export default function Landing() {
   const [popularMovies, setPopularMovies] = useState();
   useEffect(() => {
     axios
-      .get("https://api.themoviedb.org/3/discover/movie", {
-        params: {
-          api_key: "573180add55876cdd18911a65315f1b3",
-        },
-      })
+      .get(
+        "https://api.themoviedb.org/3/movie/top_rated?language=en-US&page=1",
+        {
+          params: {
+            api_key: "573180add55876cdd18911a65315f1b3",
+          },
+        }
+      )
       .then((res) => setPopularMovies(res.data.results))
       .catch((err) => console.error(err));
   }, []);
-
+  console.log(popularMovies);
   return (
     <>
       <div className="mainParentPopular">
