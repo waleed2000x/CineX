@@ -5,8 +5,11 @@ import "swiper/css/pagination";
 import { FreeMode } from "swiper/modules";
 import { useContext } from "react";
 import { ThemeContext } from "../themeContext/ThemeContext";
+import InfoOutlinedIcon from "@mui/icons-material/InfoOutlined";
+import { IconButton } from "@mui/material";
 
-export default function Slider({ popularMovies, endpoint }) {
+// eslint-disable-next-line react/prop-types
+export default function Slider({ endpoint }) {
   const { theme } = useContext(ThemeContext);
 
   return (
@@ -21,8 +24,9 @@ export default function Slider({ popularMovies, endpoint }) {
         modules={[FreeMode]}
         className="mySwiper"
       >
-        {popularMovies &&
-          popularMovies.map((item, index) => (
+        {endpoint &&
+          // eslint-disable-next-line react/prop-types
+          endpoint.map((item, index) => (
             <SwiperSlide
               key={index}
               style={{ position: "relative" }}
@@ -32,7 +36,17 @@ export default function Slider({ popularMovies, endpoint }) {
                 className={`${
                   theme === "light" ? "sliderShaderLight" : "sliderShaderDark"
                 }`}
-              ></div>
+              >
+                <IconButton
+                  style={{
+                    position: "absolute",
+                    right: "0px",
+                    top: "0px",
+                  }}
+                >
+                  <InfoOutlinedIcon />
+                </IconButton>
+              </div>
               <img
                 src={`https://image.tmdb.org/t/p/w500/${item.backdrop_path}`}
                 alt={item.original_title}

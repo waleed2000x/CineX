@@ -9,12 +9,13 @@ import useFetchAPI from "../useFetch/UseFetchAPI";
 export default function Landing() {
   const {
     data: popularMovies,
+    // eslint-disable-next-line no-unused-vars
     isLoading,
+    // eslint-disable-next-line no-unused-vars
     error,
-  } = useFetchAPI("https://api.themoviedb.org/3/movie/popular", {
-    api_key: "573180add55876cdd18911a65315f1b3",
-  });
-  console.log(popularMovies);
+  } = useFetchAPI(
+    "https://api.themoviedb.org/3/movie/popular&apiKey=573180add55876cdd18911a65315f1b3"
+  );
   const { theme } = useContext(ThemeContext);
   return (
     <>
@@ -39,7 +40,7 @@ export default function Landing() {
         >
           Landing
         </Typography>
-        <Slider popularMovies={popularMovies} />
+        <Slider endpoint={popularMovies} />
       </div>
     </>
   );
