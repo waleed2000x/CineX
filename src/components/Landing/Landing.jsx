@@ -46,7 +46,7 @@ export default function Landing() {
           textAlign={"center"}
           color={`${theme === "light" ? "black" : "white"}`}
         >
-          Landing
+          Top Rated
         </Typography>
         <Slider endpoint={popularMovies} />
       </div>
