@@ -6,7 +6,7 @@ import { FreeMode } from "swiper/modules";
 import { useContext } from "react";
 import { ThemeContext } from "../themeContext/ThemeContext";
 import InfoOutlinedIcon from "@mui/icons-material/InfoOutlined";
-import { IconButton } from "@mui/material";
+import { IconButton, Typography } from "@mui/material";
 
 // eslint-disable-next-line react/prop-types
 export default function Slider({ endpoint }) {
@@ -46,6 +46,19 @@ export default function Slider({ endpoint }) {
                 >
                   <InfoOutlinedIcon />
                 </IconButton>
+                <Typography
+                  className="title"
+                  variant="p"
+                  fontFamily={"inherit"}
+                  style={{
+                    position: "absolute",
+                    left: "5px",
+                    bottom: "0px",
+                  }}
+                  color={`${theme === "light" ? "black" : "white"}`}
+                >
+                  {item.original_title}
+                </Typography>
               </div>
               <img
                 src={`https://image.tmdb.org/t/p/w500/${item.backdrop_path}`}
