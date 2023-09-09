@@ -357,6 +357,9 @@
   width: 40%;
 }
 
+.sliderParent {
+  padding: 30px 0px;
+}
 .sliderParent .swiper {
   width: 95%;
   display: flex;
