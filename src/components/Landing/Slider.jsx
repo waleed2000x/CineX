@@ -50,6 +50,7 @@ export default function Slider({ endpoint }) {
                   className="title"
                   variant="p"
                   fontFamily={"inherit"}
+                  fontWeight={"800"}
                   style={{
                     position: "absolute",
                     left: "5px",
