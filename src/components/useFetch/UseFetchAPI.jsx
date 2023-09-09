@@ -2,14 +2,20 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
 
-function useFetchAPI(url) {
+function useFetchAPI(url, params) {
   const [data, setData] = useState(null); // Initialize data as null
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState(null);
 
   useEffect(() => {
+    const options = {
+      method: "GET",
+      url,
+      params,
+    };
+
     axios
-      .request(url)
+      .request(options)
       .then((response) => {
         setData(response.data.results);
         setIsLoading(false);
@@ -18,7 +24,7 @@ function useFetchAPI(url) {
         setError(error);
         setIsLoading(false);
       });
-  }, [url]);
+  }, [url, params]);
 
   return { data, isLoading, error };
 }

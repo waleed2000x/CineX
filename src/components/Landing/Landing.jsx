@@ -11,11 +11,10 @@ export default function Landing() {
     data: popularMovies,
     // eslint-disable-next-line no-unused-vars
     isLoading,
-    // eslint-disable-next-line no-unused-vars
     error,
-  } = useFetchAPI(
-    "https://api.themoviedb.org/3/movie/popular&apiKey=573180add55876cdd18911a65315f1b3"
-  );
+  } = useFetchAPI("https://api.themoviedb.org/3/movie/popular", {
+    api_key: "573180add55876cdd18911a65315f1b3",
+  });
   const { theme } = useContext(ThemeContext);
   return (
     <>
