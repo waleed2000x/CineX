@@ -1,21 +1,27 @@
 import { Typography } from "@mui/material";
-import { useContext } from "react";
+import { useContext, useEffect } from "react";
 import { ThemeContext } from "../themeContext/ThemeContext";
 import FirstSightVideo from "../Popular/FirstSightVideo";
 import Oppenheimer from "../media/Oppenheimer.mp4";
 import OppenheimerImg from "../media/oppenheimerImg.jpg";
 import Slider from "./Slider";
-import useFetchAPI from "../useFetch/UseFetchAPI";
+import axios from "axios";
+import { useState } from "react";
+// import useFetchAPI from "../useFetch/UseFetchAPI";
 export default function Landing() {
-  const {
-    data: popularMovies,
-    // eslint-disable-next-line no-unused-vars
-    isLoading,
-    error,
-  } = useFetchAPI("https://api.themoviedb.org/3/movie/popular", {
-    api_key: "573180add55876cdd18911a65315f1b3",
-  });
   const { theme } = useContext(ThemeContext);
+  const [popularMovies, setPopularMovies] = useState();
+  useEffect(() => {
+    axios
+      .get("https://api.themoviedb.org/3/movie/popular", {
+        params: {
+          api_key: "573180add55876cdd18911a65315f1b3", // Replace with your actual API key
+        },
+      })
+      .then((res) => setPopularMovies(res.data.results))
+      .catch((err) => console.error(err));
+  }, []);
+
   return (
     <>
       <div className="mainParentPopular">

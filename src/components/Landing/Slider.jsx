@@ -38,6 +38,7 @@ export default function Slider({ endpoint }) {
                 }`}
               >
                 <IconButton
+                  onClick={() => alert("pop")}
                   style={{
                     position: "absolute",
                     right: "0px",
