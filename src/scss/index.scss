@@ -377,9 +377,10 @@ $red: #aa1004;
 // SWIPPER JS
 .sliderParent {
   .swiper {
+    width: 95%;
     display: flex;
     justify-content: center;
-    margin: 0px 2%;
+    // margin: 0px 20px;
   }
 
   .swiper-slide {

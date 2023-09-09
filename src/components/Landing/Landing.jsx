@@ -13,9 +13,9 @@ export default function Landing() {
   const [popularMovies, setPopularMovies] = useState();
   useEffect(() => {
     axios
-      .get("https://api.themoviedb.org/3/movie/popular", {
+      .get("https://api.themoviedb.org/3/discover/movie", {
         params: {
-          api_key: "573180add55876cdd18911a65315f1b3", // Replace with your actual API key
+          api_key: "573180add55876cdd18911a65315f1b3",
         },
       })
       .then((res) => setPopularMovies(res.data.results))

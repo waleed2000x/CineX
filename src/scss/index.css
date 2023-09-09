@@ -358,9 +358,9 @@
 }
 
 .sliderParent .swiper {
+  width: 95%;
   display: flex;
   justify-content: center;
-  margin: 0px 2%;
 }
 .sliderParent .swiper-slide {
   position: relative;

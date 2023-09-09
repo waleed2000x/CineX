@@ -15,7 +15,7 @@ export default function Slider({ endpoint }) {
   return (
     <div className="sliderParent">
       <Swiper
-        slidesPerView={4.4}
+        slidesPerView={4}
         spaceBetween={30}
         freeMode={true}
         pagination={{
