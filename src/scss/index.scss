@@ -376,13 +376,40 @@ $red: #aa1004;
 }
 // SWIPPER JS
 .sliderParent {
-  padding: 30px 0px;
+  position: relative;
+  margin: 30px 0px;
+  // overflow: hidden;
   .swiper {
     width: 95%;
     display: flex;
     justify-content: center;
   }
-
+  .leftArrow {
+    position: absolute;
+    left: 0px;
+    height: 100%;
+    width: 2%;
+    z-index: 2;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    & svg {
+      font-size: 70px;
+    }
+  }
+  .rightArrow {
+    position: absolute;
+    right: 0px;
+    height: 100%;
+    width: 2%;
+    z-index: 2;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    & svg {
+      font-size: 70px;
+    }
+  }
   .swiper-slide {
     position: relative;
     overflow: hidden;

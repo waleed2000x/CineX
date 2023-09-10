@@ -7,6 +7,8 @@ import { useContext } from "react";
 import { ThemeContext } from "../themeContext/ThemeContext";
 import InfoOutlinedIcon from "@mui/icons-material/InfoOutlined";
 import { IconButton, Typography } from "@mui/material";
+import ChevronLeftIcon from "@mui/icons-material/ChevronLeft";
+import ChevronRightIcon from "@mui/icons-material/ChevronRight";
 
 // eslint-disable-next-line react/prop-types
 export default function Slider({ endpoint }) {
@@ -14,6 +16,12 @@ export default function Slider({ endpoint }) {
 
   return (
     <div className="sliderParent">
+      <div className="leftArrow">
+        <ChevronLeftIcon />
+      </div>
+      <div className="rightArrow">
+        <ChevronRightIcon />
+      </div>
       <Swiper
         slidesPerView={4}
         spaceBetween={30}
@@ -22,7 +30,7 @@ export default function Slider({ endpoint }) {
           clickable: true,
         }}
         modules={[FreeMode]}
-        className="mySwiper"
+        className="Swiper"
       >
         {endpoint &&
           // eslint-disable-next-line react/prop-types
