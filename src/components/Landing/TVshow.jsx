@@ -67,8 +67,9 @@ export default function TVshow() {
         <Typography
           variant="h4"
           fontFamily={"inherit"}
-          textAlign={"center"}
-          width={"100%"}
+          textAlign={"start"}
+          marginLeft={"20px"}
+          width={"max-content"}
           textTransform={"uppercase"}
           color={`${theme === "light" ? "black" : "white"}`}
         >

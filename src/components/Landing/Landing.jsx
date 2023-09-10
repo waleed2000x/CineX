@@ -76,8 +76,9 @@ export default function Landing() {
         <Typography
           variant="h4"
           fontFamily={"inherit"}
-          textAlign={"center"}
-          width={"100%"}
+          textAlign={"start"}
+          width={"max-content"}
+          marginLeft={"20px"}
           textTransform={"uppercase"}
           color={`${theme === "light" ? "black" : "white"}`}
         >
@@ -89,8 +90,9 @@ export default function Landing() {
         <Typography
           variant="h4"
           fontFamily={"inherit"}
-          textAlign={"center"}
-          width={"100%"}
+          textAlign={"start"}
+          width={"max-content"}
+          marginLeft={"20px"}
           textTransform={"uppercase"}
           color={`${theme === "light" ? "black" : "white"}`}
         >
@@ -102,8 +104,9 @@ export default function Landing() {
         <Typography
           variant="h4"
           fontFamily={"inherit"}
-          textAlign={"center"}
-          width={"100%"}
+          textAlign={"start"}
+          marginLeft={"20px"}
+          width={"max-content"}
           textTransform={"uppercase"}
           color={`${theme === "light" ? "black" : "white"}`}
         >
