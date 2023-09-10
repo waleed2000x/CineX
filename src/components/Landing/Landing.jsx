@@ -7,10 +7,13 @@ import OppenheimerImg from "../media/oppenheimerImg.jpg";
 import Slider from "./Slider";
 import axios from "axios";
 import { useState } from "react";
+import TVshow from "./TVshow";
 // import useFetchAPI from "../useFetch/UseFetchAPI";
 export default function Landing() {
   const { theme } = useContext(ThemeContext);
-  const [popularMovies, setPopularMovies] = useState();
+  const [topRatedMovies, setTopRatedMovies] = useState();
+  const [upcommingMovies, setUpcommingMovies] = useState();
+  const [latest, setLatest] = useState([]);
   useEffect(() => {
     axios
       .get(
@@ -21,10 +24,39 @@ export default function Landing() {
           },
         }
       )
-      .then((res) => setPopularMovies(res.data.results))
+      .then((res) => setTopRatedMovies(res.data.results))
       .catch((err) => console.error(err));
+    axios
+      .get(
+        "https://api.themoviedb.org/3/movie/now_playing?language=en-US&page=1",
+        {
+          params: {
+            api_key: "573180add55876cdd18911a65315f1b3",
+          },
+        }
+      )
+      .then((res) => setUpcommingMovies(res.data.results))
+      .catch((err) => console.error(err));
+    const options = {
+      method: "GET",
+      url: "https://api.themoviedb.org/3/movie/latest",
+      headers: {
+        accept: "application/json",
+        Authorization:
+          "Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI1NzMxODBhZGQ1NTg3NmNkZDE4OTExYTY1MzE1ZjFiMyIsInN1YiI6IjY0ZjZjZmQ4NWYyYjhkMDBhYmNiZDcxNyIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.Fb9Iw-2JaPM8_9Wk1FPiYcRgsQqlL3ak1v12FimF7TA",
+      },
+    };
+
+    axios
+      .request(options)
+      .then(function (response) {
+        setLatest(response.data.results);
+      })
+      .catch(function (error) {
+        console.error(error);
+      });
   }, []);
-  console.log(popularMovies);
+  // console.log(latest);
   return (
     <>
       <div className="mainParentPopular">
@@ -44,12 +76,28 @@ export default function Landing() {
           variant="h4"
           fontFamily={"inherit"}
           textAlign={"center"}
+          width={"100%"}
+          textTransform={"uppercase"}
           color={`${theme === "light" ? "black" : "white"}`}
         >
           Top Rated
         </Typography>
-        <Slider endpoint={popularMovies} />
+        <Slider endpoint={topRatedMovies} />
       </div>
+      <div className="landingParent">
+        <Typography
+          variant="h4"
+          fontFamily={"inherit"}
+          textAlign={"center"}
+          width={"100%"}
+          textTransform={"uppercase"}
+          color={`${theme === "light" ? "black" : "white"}`}
+        >
+          Now in Theaters
+        </Typography>
+        <Slider endpoint={upcommingMovies} />
+      </div>
+      <TVshow />
     </>
   );
 }

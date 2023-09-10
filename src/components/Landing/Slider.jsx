@@ -59,7 +59,7 @@ export default function Slider({ endpoint }) {
                   }}
                   color={`${theme === "light" ? "black" : "white"}`}
                 >
-                  {item.original_title}
+                  {item.original_title || item.name}
                 </Typography>
               </div>
               <img

@@ -367,6 +367,7 @@
 }
 .sliderParent .swiper-slide {
   position: relative;
+  overflow: hidden;
 }
 .sliderParent .swiper-slide img {
   width: 100%;
@@ -396,8 +397,4 @@
 }
 .sliderParent .swiper-slide:hover .sliderShaderDark .title {
   display: block;
-}
-
-.landingParent {
-  margin-top: 100px;
 }/*# sourceMappingURL=index.css.map */

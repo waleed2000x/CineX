@@ -385,6 +385,7 @@ $red: #aa1004;
 
   .swiper-slide {
     position: relative;
+    overflow: hidden;
     & img {
       width: 100%;
       border-radius: 5px;
@@ -431,5 +432,5 @@ $red: #aa1004;
 
 // Landing
 .landingParent {
-  margin-top: $appbarHeight;
+  // margin-top: $appbarHeight;
 }
