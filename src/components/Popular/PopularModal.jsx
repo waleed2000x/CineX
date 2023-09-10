@@ -18,7 +18,7 @@ export default function PopularModal({ open, onClose, data }) {
           border: ` 2px solid ${theme === "light" ? "black" : "white"}`,
         }}
       >
-        <div
+        {/* <div
           style={{
             display: "flex",
             width: "100%",
@@ -27,7 +27,7 @@ export default function PopularModal({ open, onClose, data }) {
           }}
         >
           <InfoOutlinedIcon style={{ fontSize: "30px" }} />
-        </div>
+        </div> */}
         <Typography variant="h4" fontFamily={"inherit"}>
           {data.original_title}
         </Typography>
@@ -41,7 +41,8 @@ export default function PopularModal({ open, onClose, data }) {
           <img
             src={`https://image.tmdb.org/t/p/w500/${data.backdrop_path}`}
             style={{
-              height: "500px",
+              margin: "10px 0px",
+              borderRadius: "3px",
               width: "100%",
               objectFit: "contain",
             }}
@@ -50,6 +51,18 @@ export default function PopularModal({ open, onClose, data }) {
         <Typography variant="p" fontFamily={"inherit"}>
           {data.overview}
         </Typography>
+        <div
+          style={{
+            display: "flex",
+            width: "100%",
+            justifyContent: "space-between",
+          }}
+        >
+          <Typography variant="h6">Released: {data.release_date}</Typography>
+          <Typography variant="h6">
+            Language: {data.original_language}
+          </Typography>
+        </div>
       </DialogContent>
     </Dialog>
   );
