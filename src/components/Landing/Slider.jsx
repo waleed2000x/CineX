@@ -6,7 +6,7 @@ import { FreeMode } from "swiper/modules";
 import { useContext } from "react";
 import { ThemeContext } from "../themeContext/ThemeContext";
 import InfoOutlinedIcon from "@mui/icons-material/InfoOutlined";
-import { IconButton, Typography } from "@mui/material";
+import { Button, IconButton, Typography } from "@mui/material";
 // import ChevronLeftIcon from "@mui/icons-material/ChevronLeft";
 // import ChevronRightIcon from "@mui/icons-material/ChevronRight";
 import Skeleton, { SkeletonTheme } from "react-loading-skeleton";
@@ -84,15 +84,29 @@ export default function Slider({ endpoint, poster_path }) {
                   theme === "light" ? "sliderShaderLight" : "sliderShaderDark"
                 }`}
               >
-                <IconButton
+                <div
+                  className="landingItemButtons"
                   style={{
                     position: "absolute",
-                    right: "0px",
-                    top: "0px",
+                    display: "none",
+                    width: "100%",
+                    justifyContent: "space-between",
                   }}
                 >
-                  <InfoOutlinedIcon />
-                </IconButton>
+                  <IconButton>
+                    <InfoOutlinedIcon style={{ fontSize: "30px" }} />
+                  </IconButton>
+                  <Button variant="text">
+                    <Typography
+                      variant="p"
+                      color={"black"}
+                      fontFamily={"inherit"}
+                      fontWeight={"600"}
+                    >
+                      Watch Now
+                    </Typography>
+                  </Button>
+                </div>
                 <Typography
                   className="title"
                   variant="p"
