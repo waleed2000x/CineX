@@ -38,7 +38,6 @@ export default function WideScreen() {
             label="Search movies to watch"
             variant="standard"
             fullWidth
-            color="error"
           />
         </div>
         <div className={`themeSwitch `}>
