@@ -65,7 +65,7 @@
   padding: 15px;
   font-size: 20px;
   font-family: "Orbitron", sans-serif;
-  color: white;
+  color: rgb(103, 102, 102);
 }
 .wideScreenParent .searchWideScreen .MuiInputLabel-root {
   color: white;
