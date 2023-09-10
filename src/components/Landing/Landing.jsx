@@ -13,7 +13,6 @@ export default function Landing() {
   const { theme } = useContext(ThemeContext);
   const [topRatedMovies, setTopRatedMovies] = useState();
   const [upcommingMovies, setUpcommingMovies] = useState();
-  const [latest, setLatest] = useState([]);
   useEffect(() => {
     axios
       .get(
@@ -37,26 +36,7 @@ export default function Landing() {
       )
       .then((res) => setUpcommingMovies(res.data.results))
       .catch((err) => console.error(err));
-    const options = {
-      method: "GET",
-      url: "https://api.themoviedb.org/3/movie/latest",
-      headers: {
-        accept: "application/json",
-        Authorization:
-          "Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI1NzMxODBhZGQ1NTg3NmNkZDE4OTExYTY1MzE1ZjFiMyIsInN1YiI6IjY0ZjZjZmQ4NWYyYjhkMDBhYmNiZDcxNyIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.Fb9Iw-2JaPM8_9Wk1FPiYcRgsQqlL3ak1v12FimF7TA",
-      },
-    };
-
-    axios
-      .request(options)
-      .then(function (response) {
-        setLatest(response.data.results);
-      })
-      .catch(function (error) {
-        console.error(error);
-      });
   }, []);
-  // console.log(latest);
   return (
     <>
       <div className="mainParentPopular">
