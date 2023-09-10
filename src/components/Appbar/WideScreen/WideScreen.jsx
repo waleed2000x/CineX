@@ -10,10 +10,8 @@ import { NavLink } from "react-router-dom";
 
 export default function WideScreen() {
   const { theme, setTheme } = useContext(ThemeContext);
-  console.log(theme);
   const handleTheme = () => {
     setTheme(theme === themes.light ? themes.dark : themes.light);
-    console.log(theme);
   };
   return (
     <>

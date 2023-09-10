@@ -7,8 +7,8 @@ import { useContext } from "react";
 import { ThemeContext } from "../themeContext/ThemeContext";
 import InfoOutlinedIcon from "@mui/icons-material/InfoOutlined";
 import { IconButton, Typography } from "@mui/material";
-import ChevronLeftIcon from "@mui/icons-material/ChevronLeft";
-import ChevronRightIcon from "@mui/icons-material/ChevronRight";
+// import ChevronLeftIcon from "@mui/icons-material/ChevronLeft";
+// import ChevronRightIcon from "@mui/icons-material/ChevronRight";
 import Skeleton, { SkeletonTheme } from "react-loading-skeleton";
 
 // eslint-disable-next-line react/prop-types

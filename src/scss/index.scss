@@ -100,7 +100,7 @@ $red: #aa1004;
   }
 }
 .mainParentPopular {
-  margin-top: $appbarHeight;
+  margin-top: $appbarHeight - 20px;
   z-index: 1;
   display: flex;
   flex-direction: column;
