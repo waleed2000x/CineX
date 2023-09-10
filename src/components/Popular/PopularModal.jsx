@@ -18,12 +18,38 @@ export default function PopularModal({ open, onClose, data }) {
           border: ` 2px solid ${theme === "light" ? "black" : "white"}`,
         }}
       >
-        <Typography variant="h6">data</Typography>
-        <Typography>
-          This is the content of the modal. You can add any information or
-          components you want here.
+        <div
+          style={{
+            display: "flex",
+            width: "100%",
+            justifyContent: "flex-end",
+            margin: "10px 0px",
+          }}
+        >
+          <InfoOutlinedIcon style={{ fontSize: "30px" }} />
+        </div>
+        <Typography variant="h4" fontFamily={"inherit"}>
+          {data.original_title}
         </Typography>
-        <InfoOutlinedIcon />
+        <div
+          className="popularModalDialoge"
+          style={{
+            display: "flex",
+            justifyContent: "center",
+          }}
+        >
+          <img
+            src={`https://image.tmdb.org/t/p/w500/${data.backdrop_path}`}
+            style={{
+              height: "500px",
+              width: "100%",
+              objectFit: "contain",
+            }}
+          />
+        </div>
+        <Typography variant="p" fontFamily={"inherit"}>
+          {data.overview}
+        </Typography>
       </DialogContent>
     </Dialog>
   );
