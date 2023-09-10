@@ -1,4 +1,4 @@
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import FirstSightVideo from "./FirstSightVideo";
 import InfoOutlinedIcon from "@mui/icons-material/InfoOutlined";
 import useFetchAPI from "../useFetch/UseFetchAPI";
@@ -8,7 +8,9 @@ import { Button, IconButton, Typography } from "@mui/material";
 import { ThemeContext } from "../themeContext/ThemeContext";
 import { motion } from "framer-motion";
 import PopularSkeleton from "./PopularSkeleton";
+import PopularModal from "./PopularModal";
 export default function Popular() {
+  const [showModal, setShowModal] = useState(false);
   const { theme } = useContext(ThemeContext);
   const {
     data: popularMovies,
@@ -17,9 +19,13 @@ export default function Popular() {
   } = useFetchAPI("https://api.themoviedb.org/3/movie/popular", {
     api_key: "573180add55876cdd18911a65315f1b3",
   });
-  console.log(popularMovies);
   return (
     <div className="mainParentPopular">
+      <PopularModal
+        open={showModal}
+        data={popularMovies}
+        onClose={() => setShowModal(false)}
+      />
       <FirstSightVideo
         videoLink={Equalizer}
         details={true}
@@ -63,6 +69,7 @@ export default function Popular() {
                   }`}
                 >
                   <Button
+                    onClick={() => setShowModal(true)}
                     className="watch"
                     variant="filled"
                     color="error"
