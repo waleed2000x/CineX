@@ -9,8 +9,10 @@ import { ThemeContext } from "../themeContext/ThemeContext";
 import { motion } from "framer-motion";
 import PopularSkeleton from "./PopularSkeleton";
 import PopularModal from "./PopularModal";
+
 export default function Popular() {
   const [showModal, setShowModal] = useState(false);
+  const [selectedMovie, setSelectedMovie] = useState(null); // State to track the selected movie
   const { theme } = useContext(ThemeContext);
   const {
     data: popularMovies,
@@ -19,13 +21,15 @@ export default function Popular() {
   } = useFetchAPI("https://api.themoviedb.org/3/movie/popular", {
     api_key: "573180add55876cdd18911a65315f1b3",
   });
+
+  // Function to handle opening the modal with the selected movie
+  const openModalWithMovie = (movie) => {
+    setSelectedMovie(movie);
+    setShowModal(true);
+  };
+
   return (
     <div className="mainParentPopular">
-      <PopularModal
-        open={showModal}
-        data={popularMovies}
-        onClose={() => setShowModal(false)}
-      />
       <FirstSightVideo
         videoLink={Equalizer}
         details={true}
@@ -69,7 +73,7 @@ export default function Popular() {
                   }`}
                 >
                   <Button
-                    onClick={() => setShowModal(true)}
+                    onClick={() => openModalWithMovie(movie)}
                     className="watch"
                     variant="filled"
                     color="error"
@@ -105,6 +109,16 @@ export default function Popular() {
           )}
         </div>
       </div>
+      {selectedMovie && (
+        <PopularModal
+          open={showModal}
+          data={selectedMovie}
+          onClose={() => {
+            setShowModal(false);
+            setSelectedMovie(null);
+          }}
+        />
+      )}
     </div>
   );
 }
