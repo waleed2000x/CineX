@@ -1,9 +1,8 @@
+/* eslint-disable react/prop-types */
 import { Dialog, DialogContent, Typography } from "@mui/material";
-// import InfoOutlinedIcon from "@mui/icons-material/InfoOutlined";
 import { useContext, useEffect } from "react";
 import { ThemeContext } from "../themeContext/ThemeContext";
 
-// eslint-disable-next-line react/prop-types
 export default function LandingModal({ open, onClose, data }) {
   const { theme } = useContext(ThemeContext);
   useEffect(() => {
