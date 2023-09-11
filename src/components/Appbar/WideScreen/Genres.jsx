@@ -57,7 +57,7 @@ export default function Genres() {
       endIcon={<ArrowDropDownIcon style={iconStyle} />}
       onClick={handleClick}
     >
-      <div>
+      <div className="Genres">
         <Typography variant="p" color={theme === "light" ? "black" : "white"}>
           Genres
         </Typography>
