@@ -1,10 +1,10 @@
 import { Dialog, DialogContent, Typography } from "@mui/material";
-import InfoOutlinedIcon from "@mui/icons-material/InfoOutlined";
+// import InfoOutlinedIcon from "@mui/icons-material/InfoOutlined";
 import { useContext, useEffect } from "react";
 import { ThemeContext } from "../themeContext/ThemeContext";
 
 // eslint-disable-next-line react/prop-types
-export default function PopularModal({ open, onClose, data }) {
+export default function LandingModal({ open, onClose, data }) {
   const { theme } = useContext(ThemeContext);
   useEffect(() => {
     console.log(data);
@@ -19,7 +19,7 @@ export default function PopularModal({ open, onClose, data }) {
         }}
       >
         <Typography variant="h4" fontFamily={"inherit"}>
-          {data.original_title}
+          {data.original_title || data.original_name}
         </Typography>
         <div
           className="popularModalDialoge"

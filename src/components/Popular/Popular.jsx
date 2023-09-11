@@ -12,7 +12,7 @@ import PopularModal from "./PopularModal";
 
 export default function Popular() {
   const [showModal, setShowModal] = useState(false);
-  const [selectedMovie, setSelectedMovie] = useState(null); // State to track the selected movie
+  const [selectedMovie, setSelectedMovie] = useState(null);
   const { theme } = useContext(ThemeContext);
   const {
     data: popularMovies,

@@ -3,30 +3,30 @@ import "swiper/css";
 import "swiper/css/free-mode";
 import "swiper/css/pagination";
 import { FreeMode } from "swiper/modules";
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import { ThemeContext } from "../themeContext/ThemeContext";
 import InfoOutlinedIcon from "@mui/icons-material/InfoOutlined";
 import { Button, IconButton, Typography } from "@mui/material";
-// import ChevronLeftIcon from "@mui/icons-material/ChevronLeft";
-// import ChevronRightIcon from "@mui/icons-material/ChevronRight";
 import Skeleton, { SkeletonTheme } from "react-loading-skeleton";
+import LandingModal from "./LandingModal";
 
 // eslint-disable-next-line react/prop-types
 export default function Slider({ endpoint, poster_path }) {
   const { theme } = useContext(ThemeContext);
+  const [showModal, setShowModal] = useState(false);
+  const [modalData, setModalData] = useState(null);
 
+  const openModal = (item) => {
+    setModalData(item);
+    setShowModal(true);
+  };
+
+  const closeModal = () => {
+    setModalData(null);
+    setShowModal(false);
+  };
   return (
     <div className="sliderParent">
-      {/* <div className="leftArrow">
-        <IconButton>
-          <ChevronLeftIcon />
-        </IconButton>
-      </div>
-      <div className="rightArrow">
-        <IconButton>
-          <ChevronRightIcon />
-        </IconButton>
-      </div> */}
       <Swiper
         slidesPerView={4}
         spaceBetween={30}
@@ -96,7 +96,7 @@ export default function Slider({ endpoint, poster_path }) {
                   <IconButton>
                     <InfoOutlinedIcon style={{ fontSize: "30px" }} />
                   </IconButton>
-                  <Button variant="text">
+                  <Button variant="text" onClick={() => openModal(item)}>
                     <Typography
                       variant="p"
                       color={"black"}
@@ -132,6 +132,9 @@ export default function Slider({ endpoint, poster_path }) {
           ))
         )}
       </Swiper>
+      {showModal && (
+        <LandingModal open={showModal} onClose={closeModal} data={modalData} />
+      )}
     </div>
   );
 }
