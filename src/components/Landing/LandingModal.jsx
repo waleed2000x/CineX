@@ -1,4 +1,3 @@
-/* eslint-disable react/prop-types */
 import { Dialog, DialogContent, Typography } from "@mui/material";
 import { useContext, useEffect } from "react";
 import { ThemeContext } from "../themeContext/ThemeContext";
