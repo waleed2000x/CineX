@@ -23,7 +23,6 @@ export default function Releases() {
       api_key: "573180add55876cdd18911a65315f1b3",
     }
   );
-  // Function to handle opening the modal with the selected movie
   const openModalWithMovie = (movie) => {
     setSelectedMovie(movie);
     setShowModal(true);
