@@ -3,7 +3,7 @@ import AfterEverything from "../media/AFTEREVERYTHING.mp4";
 import AfterEverythingImg from "../media/After-Everything.jpg";
 export default function Releases() {
   return (
-    <div>
+    <div className="mainParentPopular">
       <FirstSightVideo
         videoLink={AfterEverything}
         details={true}
