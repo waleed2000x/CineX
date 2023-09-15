@@ -450,23 +450,27 @@
 }
 .footerParent .imageFooter {
   display: flex;
+  justify-content: center;
   width: 33.33%;
 }
-.footerParent .imageFooter .imageAndText {
+.footerParent .imageFooter a {
+  width: 80%;
+}
+.footerParent .imageFooter a .imageAndText {
   position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
   width: 100%;
 }
-.footerParent .imageFooter .imageAndText .footerLottie {
+.footerParent .imageFooter a .imageAndText .footerLottie {
   position: absolute;
   width: 50px;
   height: auto;
   top: 20px;
   left: 32%;
 }
-.footerParent .imageFooter .imageAndText img {
+.footerParent .imageFooter a .imageAndText img {
   width: 200px;
   height: 200px;
   -o-object-fit: cover;
@@ -474,7 +478,7 @@
   border-radius: 50%;
   margin: 20px 0px 10px 0px;
 }
-.footerParent .imageFooter .imageAndText h1 {
+.footerParent .imageFooter a .imageAndText h1 {
   font-size: 35px;
   margin-bottom: 10px;
 }

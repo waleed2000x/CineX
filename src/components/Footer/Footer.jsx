@@ -13,17 +13,19 @@ export default function Footer() {
           borderRight: `1px solid ${theme === "light" ? "black" : "white"}`,
         }}
       >
-        <div className="imageAndText">
-          <FooterLottie />
-          <img src={MyImg} alt="Waleed" />
-          <Typography
-            variant="h1"
-            fontFamily={"inherit"}
-            color={`${theme === "light" ? "black" : "white"}`}
-          >
-            Waleed Ahmed
-          </Typography>
-        </div>
+        <a href="waleeddev.vercel.app" target="_blank">
+          <div className="imageAndText">
+            <FooterLottie />
+            <img src={MyImg} alt="Waleed" />
+            <Typography
+              variant="h1"
+              fontFamily={"inherit"}
+              color={`${theme === "light" ? "black" : "white"}`}
+            >
+              Waleed Ahmed
+            </Typography>
+          </div>
+        </a>
       </div>
       <div
         className="descFooter"
