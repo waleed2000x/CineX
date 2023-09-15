@@ -3,11 +3,12 @@ import FirstSightVideo from "../Popular/FirstSightVideo";
 import AfterEverything from "../media/AFTEREVERYTHING.mp4";
 import AfterEverythingImg from "../media/After-Everything.jpg";
 import { useContext, useState } from "react";
-import { ThemeContext } from "@emotion/react";
 import { Button, IconButton, Typography } from "@mui/material";
 import useFetchAPI from "../useFetch/UseFetchAPI";
 import PopularSkeleton from "../Popular/PopularSkeleton";
 import { motion } from "framer-motion";
+import PopularModal from "../Popular/PopularModal";
+import { ThemeContext } from "../themeContext/ThemeContext";
 export default function Releases() {
   const [showModal, setShowModal] = useState(false);
   const [selectedMovie, setSelectedMovie] = useState(null);
@@ -47,8 +48,7 @@ export default function Releases() {
             fontSize={"30px"}
             color={`${theme === "light" ? "black" : "white"}`}
           >
-            Explore the Latest Blockbusters and Fan Favorites in Our Popular
-            Movies Collection
+            Explore the Latest Blockbusters and Fan Favorites Upcomming Movies
           </Typography>
         </div>
         <div className="popularMoviesList">
