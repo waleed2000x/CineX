@@ -459,15 +459,16 @@
   width: 100%;
 }
 .footerParent .imageFooter .imageAndText img {
-  height: 300px;
-  width: -moz-max-content;
-  width: max-content;
-  -o-object-fit: contain;
-     object-fit: contain;
-  border-radius: 10px;
+  width: 200px;
+  height: 200px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 50%;
+  margin: 20px 0px 10px 0px;
 }
 .footerParent .imageFooter .imageAndText h1 {
-  font-size: 50px;
+  font-size: 35px;
+  margin-bottom: 10px;
 }
 .footerParent .descFooter {
   display: flex;
