@@ -479,3 +479,37 @@ $red: #aa1004;
   padding-bottom: 100px;
   // margin-top: $appbarHeight;
 }
+// Footer
+.footerParent {
+  display: flex;
+  margin-top: 100px;
+  width: 100%;
+  .imageFooter {
+    display: flex;
+    width: 33.33%;
+    .imageAndText {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 100%;
+      & img {
+        height: 300px;
+        width: max-content;
+        object-fit: contain;
+        border-radius: 10px;
+      }
+      & h1 {
+        font-size: 50px;
+      }
+    }
+  }
+  .descFooter {
+    display: flex;
+    flex-direction: column;
+    width: 33.33%;
+  }
+  .joinFooter {
+    display: flex;
+    width: 33.33%;
+  }
+}

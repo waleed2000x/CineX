@@ -441,4 +441,40 @@
 
 .landingParent {
   padding-bottom: 100px;
+}
+
+.footerParent {
+  display: flex;
+  margin-top: 100px;
+  width: 100%;
+}
+.footerParent .imageFooter {
+  display: flex;
+  width: 33.33%;
+}
+.footerParent .imageFooter .imageAndText {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+.footerParent .imageFooter .imageAndText img {
+  height: 300px;
+  width: -moz-max-content;
+  width: max-content;
+  -o-object-fit: contain;
+     object-fit: contain;
+  border-radius: 10px;
+}
+.footerParent .imageFooter .imageAndText h1 {
+  font-size: 50px;
+}
+.footerParent .descFooter {
+  display: flex;
+  flex-direction: column;
+  width: 33.33%;
+}
+.footerParent .joinFooter {
+  display: flex;
+  width: 33.33%;
 }/*# sourceMappingURL=index.css.map */

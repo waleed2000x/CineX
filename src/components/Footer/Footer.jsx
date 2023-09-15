@@ -8,17 +8,14 @@ export default function Footer() {
     <div className="footerParent">
       <div className="imageFooter">
         <div className="imageAndText">
-          <div className="image">
-            <img src={MyImg} alt="Waleed" />
-          </div>
-          <div className="text">
-            <Typography
-              variant="h1"
-              color={`${theme === "light" ? "black" : "white"}`}
-            >
-              Waleed Ahmed
-            </Typography>
-          </div>
+          <img src={MyImg} alt="Waleed" />
+          <Typography
+            variant="h1"
+            fontFamily={"inherit"}
+            color={`${theme === "light" ? "black" : "white"}`}
+          >
+            Waleed Ahmed
+          </Typography>
         </div>
       </div>
       <div className="descFooter"></div>
