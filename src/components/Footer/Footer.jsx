@@ -2,6 +2,7 @@ import { Typography } from "@mui/material";
 import MyImg from "../media/MyImage.png";
 import { useContext } from "react";
 import { ThemeContext } from "../themeContext/ThemeContext";
+import FooterLottie from "./FotterLottie/FooterLottie";
 export default function Footer() {
   const { theme } = useContext(ThemeContext);
   return (
@@ -13,6 +14,7 @@ export default function Footer() {
         }}
       >
         <div className="imageAndText">
+          <FooterLottie />
           <img src={MyImg} alt="Waleed" />
           <Typography
             variant="h1"
