@@ -7,7 +7,7 @@ export default function Releases() {
       <FirstSightVideo
         videoLink={AfterEverything}
         details={true}
-        name={"The Equalizer 3"}
+        name={"After Everything"}
         thumbnail={AfterEverythingImg}
         description={
           "The fifth and final installment of the AFTER franchise finds Hardin struggling to move forward. Besieged by writer's block and the crushing breakup with Tessa, Hardin travels to Portugal in search of a woman he wronged in the past - and to find himself."
