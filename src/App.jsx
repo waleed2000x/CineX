@@ -7,6 +7,7 @@ import Popular from "./components/Popular/Popular";
 import Profile from "./components/profile/Profile";
 import "react-loading-skeleton/dist/skeleton.css";
 import Landing from "./components/Landing/Landing";
+import Releases from "./components/Releases/Releases";
 
 function App() {
   const [theme, setTheme] = useState(themes.dark);
@@ -17,6 +18,7 @@ function App() {
           <Route path="/" element={<Home />}>
             <Route path="/" element={<Landing />} />
             <Route path="/popular" element={<Popular />} />
+            <Route path="/releases" element={<Releases />} />
             <Route path="/profile" element={<Profile />} />
           </Route>
         </Routes>

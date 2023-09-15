@@ -45,11 +45,6 @@ export default function WideSubScreen() {
           </Typography>
         </Button>
         <Genres />
-        {/* <Button variant="text" size="small" color="error">
-          <Typography variant="p" color={theme === "light" ? "black" : "white"}>
-            Vintage
-          </Typography>
-        </Button> */}
         <NavLink to="/profile">
           <Button variant="text" size="small" color="error">
             <Typography
