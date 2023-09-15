@@ -6,7 +6,12 @@ export default function Footer() {
   const { theme } = useContext(ThemeContext);
   return (
     <div className="footerParent">
-      <div className="imageFooter">
+      <div
+        className="imageFooter"
+        style={{
+          borderRight: `1px solid ${theme === "light" ? "black" : "white"}`,
+        }}
+      >
         <div className="imageAndText">
           <img src={MyImg} alt="Waleed" />
           <Typography
@@ -18,7 +23,12 @@ export default function Footer() {
           </Typography>
         </div>
       </div>
-      <div className="descFooter"></div>
+      <div
+        className="descFooter"
+        style={{
+          borderRight: `1px solid ${theme === "light" ? "black" : "white"}`,
+        }}
+      ></div>
       <div className="joinFooter"></div>
     </div>
   );
