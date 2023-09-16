@@ -22,6 +22,13 @@ export default function Footer() {
               fontFamily={"inherit"}
               color={`${theme === "light" ? "black" : "white"}`}
             >
+              <span
+                style={{
+                  color: `${theme === "light" ? "black" : "white"}`,
+                }}
+              >
+                Developed By:
+              </span>
               Waleed Ahmed
             </Typography>
           </div>

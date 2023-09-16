@@ -489,6 +489,7 @@ $red: #aa1004;
     justify-content: center;
     width: 33.33%;
     & a {
+      text-decoration: none;
       width: 80%;
       .imageAndText {
         position: relative;
@@ -511,8 +512,15 @@ $red: #aa1004;
           margin: 20px 0px 10px 0px;
         }
         & h1 {
+          position: relative;
           font-size: 35px;
           margin-bottom: 10px;
+          & span {
+            position: absolute;
+            top: -10px;
+            left: -60px;
+            font-size: 15px;
+          }
         }
       }
     }

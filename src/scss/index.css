@@ -454,6 +454,7 @@
   width: 33.33%;
 }
 .footerParent .imageFooter a {
+  text-decoration: none;
   width: 80%;
 }
 .footerParent .imageFooter a .imageAndText {
@@ -479,8 +480,15 @@
   margin: 20px 0px 10px 0px;
 }
 .footerParent .imageFooter a .imageAndText h1 {
+  position: relative;
   font-size: 35px;
   margin-bottom: 10px;
+}
+.footerParent .imageFooter a .imageAndText h1 span {
+  position: absolute;
+  top: -10px;
+  left: -60px;
+  font-size: 15px;
 }
 .footerParent .descFooter {
   display: flex;
