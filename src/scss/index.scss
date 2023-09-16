@@ -528,10 +528,24 @@ $red: #aa1004;
   .descFooter {
     display: flex;
     flex-direction: column;
-    width: 33.33%;
+    width: 66.66%;
   }
-  .joinFooter {
+  .titleFooter {
     display: flex;
-    width: 33.33%;
+    width: 100%;
+    justify-content: center;
+    & h1 {
+      display: flex;
+      align-items: center;
+      font-size: 60px;
+      font-family: inherit;
+      font-weight: 700;
+      & span {
+        color: #aa1004;
+        font-size: 70px;
+        font-weight: 800;
+        margin: 10px;
+      }
+    }
   }
 }
