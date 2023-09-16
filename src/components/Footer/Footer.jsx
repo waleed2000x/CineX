@@ -16,7 +16,11 @@ export default function Footer() {
       >
         <a href="https://waleeddev.vercel.app" target="blank">
           <div className="imageAndText">
-            <div className="gradient"></div>
+            <div
+              className={`${
+                theme === "light" ? "gradientLight" : "gradientDark"
+              }`}
+            ></div>
             <div style={{ zIndex: "3" }}>
               <FooterLottie />
             </div>
@@ -26,13 +30,7 @@ export default function Footer() {
               fontFamily={"inherit"}
               color={`${theme === "light" ? "black" : "white"}`}
             >
-              <span
-              // style={{
-              //   color: `${theme === "light" ? "black" : "white"}`,
-              // }}
-              >
-                Developed By:
-              </span>
+              <span>Developed By:</span>
               Waleed Ahmed
             </Typography>
           </div>
