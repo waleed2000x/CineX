@@ -14,7 +14,7 @@ export default function Footer() {
           borderRight: `1px solid ${theme === "light" ? "black" : "white"}`,
         }}
       >
-        <a href="waleeddev.vercel.app" target="_blank">
+        <a href="https://waleeddev.vercel.app" target="blank">
           <div className="imageAndText">
             <div className="gradient"></div>
             <div style={{ zIndex: "3" }}>
@@ -27,9 +27,9 @@ export default function Footer() {
               color={`${theme === "light" ? "black" : "white"}`}
             >
               <span
-                style={{
-                  color: `${theme === "light" ? "black" : "white"}`,
-                }}
+              // style={{
+              //   color: `${theme === "light" ? "black" : "white"}`,
+              // }}
               >
                 Developed By:
               </span>

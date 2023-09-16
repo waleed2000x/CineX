@@ -546,9 +546,10 @@ $red: #aa1004;
           margin-bottom: 10px;
           & span {
             position: absolute;
-            top: -10px;
+            top: -15px;
             z-index: 2;
             left: -60px;
+            color: #aa1004;
             font-size: 15px;
           }
         }
