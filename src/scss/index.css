@@ -447,6 +447,7 @@
   display: flex;
   margin-top: 100px;
   width: 100%;
+  padding-bottom: 10px;
 }
 .footerParent .imageFooter {
   display: flex;
@@ -507,7 +508,6 @@
   z-index: 2;
   position: relative;
   font-size: 35px;
-  margin-bottom: 10px;
 }
 .footerParent .imageFooter a .imageAndText h1 span {
   position: absolute;
