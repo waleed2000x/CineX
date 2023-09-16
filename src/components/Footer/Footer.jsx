@@ -16,7 +16,10 @@ export default function Footer() {
       >
         <a href="waleeddev.vercel.app" target="_blank">
           <div className="imageAndText">
-            <FooterLottie />
+            <div className="gradient"></div>
+            <div style={{ zIndex: "3" }}>
+              <FooterLottie />
+            </div>
             <img src={MyImg} alt="Waleed" />
             <Typography
               variant="h1"
