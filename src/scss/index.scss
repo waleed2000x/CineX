@@ -532,8 +532,8 @@ $red: #aa1004;
   }
   .titleFooter {
     display: flex;
-    width: 100%;
-    justify-content: center;
+    width: max-content;
+    margin-left: 50px;
     & h1 {
       display: flex;
       align-items: center;

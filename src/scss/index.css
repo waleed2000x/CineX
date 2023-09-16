@@ -497,8 +497,9 @@
 }
 .footerParent .titleFooter {
   display: flex;
-  width: 100%;
-  justify-content: center;
+  width: -moz-max-content;
+  width: max-content;
+  margin-left: 50px;
 }
 .footerParent .titleFooter h1 {
   display: flex;
