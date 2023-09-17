@@ -1,4 +1,4 @@
-import { Typography } from "@mui/material";
+import { Button, Typography } from "@mui/material";
 import MyImg from "../media/MyImage.png";
 import { useContext } from "react";
 import { ThemeContext } from "../themeContext/ThemeContext";
@@ -45,6 +45,12 @@ export default function Footer() {
           >
             Cine<span>X</span>
           </Typography>
+        </div>
+        <div className="contact">
+          <input />
+          <Button variant="outlined" color="error">
+            Launch
+          </Button>
         </div>
         <div className="copyRight">
           <Typography

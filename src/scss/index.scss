@@ -604,6 +604,24 @@ $red: #aa1004;
         }
       }
     }
+    .contact {
+      display: flex;
+      margin-top: 50px;
+      justify-content: center;
+      width: 100%;
+      & input {
+        background-color: rgba(0, 0, 0, 0.4);
+        border: 1px solid #aa1004;
+        border-radius: 10px;
+        padding: 20px;
+        width: 50%;
+        outline: none;
+        color: #7f7f7f;
+      }
+      & button {
+        margin: 0px 10px;
+      }
+    }
     .copyRight {
       position: absolute;
       bottom: 5px;
