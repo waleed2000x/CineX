@@ -46,6 +46,15 @@ export default function Footer() {
             Cine<span>X</span>
           </Typography>
         </div>
+        <div className="copyRight">
+          <Typography
+            variant="p"
+            color={`${theme === "light" ? "black" : "white"}`}
+            fontFamily={"inherit"}
+          >
+            Copyright - All Rights Reserved
+          </Typography>
+        </div>
       </div>
     </div>
   );
