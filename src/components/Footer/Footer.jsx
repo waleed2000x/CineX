@@ -52,7 +52,16 @@ export default function Footer() {
             color={`${theme === "light" ? "black" : "white"}`}
             fontFamily={"inherit"}
           >
-            © CineX - All Rights Reserved
+            <span
+              style={{
+                color: "#aa1004",
+                fontWeight: "800",
+                fontSize: "20px",
+              }}
+            >
+              ©
+            </span>{" "}
+            CineX - All Rights Reserved
           </Typography>
         </div>
       </div>
