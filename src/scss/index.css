@@ -547,8 +547,9 @@
   bottom: 5px;
   left: 50%;
   right: 50%;
-}
-.footerParent .descFooter .copyRight p {
   width: -moz-max-content;
   width: max-content;
+}
+.footerParent .descFooter .copyRight p {
+  width: 100%;
 }/*# sourceMappingURL=index.css.map */

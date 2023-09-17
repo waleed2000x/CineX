@@ -52,7 +52,7 @@ export default function Footer() {
             color={`${theme === "light" ? "black" : "white"}`}
             fontFamily={"inherit"}
           >
-            Copyright - All Rights Reserved
+            © CineX - All Rights Reserved
           </Typography>
         </div>
       </div>

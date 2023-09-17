@@ -609,8 +609,9 @@ $red: #aa1004;
       bottom: 5px;
       left: 50%;
       right: 50%;
+      width: max-content;
       & p {
-        width: max-content;
+        width: 100%;
       }
     }
   }
