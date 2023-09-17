@@ -47,7 +47,7 @@ export default function Footer() {
           </Typography>
         </div>
         <div className="contact">
-          <input />
+          <input placeholder="Message For Developer" />
           <Button variant="outlined" color="error">
             Launch
           </Button>
