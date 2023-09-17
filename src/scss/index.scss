@@ -582,25 +582,35 @@ $red: #aa1004;
     }
   }
   .descFooter {
+    position: relative;
     display: flex;
     flex-direction: column;
     width: 66.66%;
-  }
-  .titleFooter {
-    display: flex;
-    width: max-content;
-    margin-left: 50px;
-    & h1 {
+    .titleFooter {
       display: flex;
-      align-items: center;
-      font-size: 60px;
-      font-family: inherit;
-      font-weight: 700;
-      & span {
-        color: #aa1004;
-        font-size: 70px;
-        font-weight: 800;
-        margin: 10px;
+      width: max-content;
+      margin-left: 50px;
+      & h1 {
+        display: flex;
+        align-items: center;
+        font-size: 60px;
+        font-family: inherit;
+        font-weight: 700;
+        & span {
+          color: #aa1004;
+          font-size: 70px;
+          font-weight: 800;
+          margin: 10px;
+        }
+      }
+    }
+    .copyRight {
+      position: absolute;
+      bottom: 5px;
+      left: 50%;
+      right: 50%;
+      & p {
+        width: max-content;
       }
     }
   }
