@@ -94,12 +94,21 @@ export default function Slider({ endpoint, poster_path }) {
                   }}
                 >
                   <IconButton>
-                    <InfoOutlinedIcon style={{ fontSize: "30px" }} />
+                    <InfoOutlinedIcon
+                      onClick={() => openModal(item)}
+                      style={{ fontSize: "30px" }}
+                    />
                   </IconButton>
-                  <Button variant="text" onClick={() => openModal(item)}>
+                  <Button
+                    variant="outlined"
+                    color="error"
+                    size="small"
+                    style={{ margin: "5px" }}
+                    onClick={() => alert("Unavailable")}
+                  >
                     <Typography
                       variant="p"
-                      color={"black"}
+                      // color={"black"}
                       fontFamily={"inherit"}
                       fontWeight={"600"}
                     >
