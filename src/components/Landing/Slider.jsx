@@ -15,7 +15,7 @@ export default function Slider({ endpoint, poster_path }) {
   const { theme } = useContext(ThemeContext);
   const [showModal, setShowModal] = useState(false);
   const [modalData, setModalData] = useState(null);
-  console.log(Genres);
+  Genres.map((item) => console.log(item));
 
   const openModal = (item) => {
     setModalData(item);
