@@ -29,7 +29,7 @@ export default function User() {
           fontFamily={"inherit"}
           marginTop={"10px"}
         >
-          Email: someone@something@Cmail.com
+          Email: someone@something@jmail.com
         </Typography>
         <Typography
           variant="p"
