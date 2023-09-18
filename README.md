@@ -19,9 +19,15 @@ Movies
 This section contains all the freshly released content
 ![Project Releases ](./ReadMeImages/Releases.png)
 
+Loading Skeleton added to every call dependening component to throw an impression to the user to wait
+![Project Releases ](./ReadMeImages/Skeleton.png)
+
 A wide number of genres to populate the app
 ![Project Genres ](./ReadMeImages/Genres.png)
+
 User's Information
 Profile Where the user will surprisingly get their Geolocation
 ![Project Genres ](./ReadMeImages/Profile.png)
+
 Footer is currently under consideration to changes
+![Project Genres ](./ReadMeImages/Footer.png)
