@@ -108,7 +108,6 @@ export default function Slider({ endpoint, poster_path }) {
                   >
                     <Typography
                       variant="p"
-                      // color={"black"}
                       fontFamily={"inherit"}
                       fontWeight={"600"}
                     >
