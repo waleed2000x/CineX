@@ -380,6 +380,19 @@ $red: #aa1004;
       width: 40%;
     }
   }
+  .User {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 80%;
+    .userInfo {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: space-evenly;
+      width: 43%;
+    }
+  }
 }
 // SWIPPER JS
 .sliderParent {

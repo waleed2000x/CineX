@@ -14,6 +14,29 @@ export default function User() {
       >
         User Information
       </Typography>
+      <div className="userInfo">
+        <Typography
+          variant="p"
+          color={`${theme === "light" ? "black" : "white"}`}
+          fontFamily={"inherit"}
+        >
+          Name: User Name
+        </Typography>
+        <Typography
+          variant="p"
+          color={`${theme === "light" ? "black" : "white"}`}
+          fontFamily={"inherit"}
+        >
+          Email: someone@something@Cmail.com
+        </Typography>
+        <Typography
+          variant="p"
+          color={`${theme === "light" ? "black" : "white"}`}
+          fontFamily={"inherit"}
+        >
+          Contact: +XX XXX XXXXXXXX
+        </Typography>
+      </div>
     </div>
   );
 }

@@ -359,6 +359,19 @@
   flex-direction: column;
   width: 40%;
 }
+.profileParent .User {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 80%;
+}
+.profileParent .User .userInfo {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-evenly;
+  width: 43%;
+}
 
 .sliderParent {
   position: relative;
