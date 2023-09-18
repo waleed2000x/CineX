@@ -14,6 +14,7 @@ export default function Landing() {
   const [topRatedMovies, setTopRatedMovies] = useState();
   const [upcommingMovies, setUpcommingMovies] = useState();
   const [trending, setTrending] = useState();
+
   useEffect(() => {
     const options = {
       method: "GET",
@@ -30,7 +31,7 @@ export default function Landing() {
       .request(options)
       .then(function (response) {
         setTrending(response.data.results);
-        console.log(response.data);
+        console.log(response.data.results);
       })
       .catch(function (error) {
         console.error(error);
