@@ -23,4 +23,5 @@ A wide number of genres to populate the app
 ![Project Genres ](./ReadMeImages/Genres.png)
 User's Information
 Profile Where the user will surprisingly get their Geolocation
-![Project Genres ](./ReadMeImages/Genres.png)
+![Project Genres ](./ReadMeImages/Profile.png)
+Footer is currently under consideration to changes
