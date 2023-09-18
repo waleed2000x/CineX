@@ -5,12 +5,12 @@ An entertainment website for Movies and TV Shows
 
 ## Tools & Libraries
 # React
-useState
-useEffect
-useContext
-customHooks
-react-router-dom
-and much more
+- useState
+- useEffect
+- useContext
+- customHooks
+- react-router-dom
+- and much more
 # SCSS
 # Material UI
 # Theme ( Dark & Light )
@@ -21,7 +21,7 @@ and much more
 # Axios
 # Swiper js
 # Framer-Motion
-## Will implement 2 Languages switching ( English, Urdu, Arabic )
+## Will implement 3 Languages switching ( English, Urdu, Arabic )
 
 Visit Now: [Cine X](https://cinx.vercel.app/)
 
