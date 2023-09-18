@@ -18,3 +18,9 @@ Movies
 
 This section contains all the freshly released content
 ![Project Releases ](./ReadMeImages/Releases.png)
+
+A wide number of genres to populate the app
+![Project Genres ](./ReadMeImages/Genres.png)
+User's Information
+Profile Where the user will surprisingly get their Geolocation
+![Project Genres ](./ReadMeImages/Genres.png)
