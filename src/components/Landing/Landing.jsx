@@ -31,7 +31,7 @@ export default function Landing() {
       .request(options)
       .then(function (response) {
         setTrending(response.data.results);
-        console.log(response.data.results);
+        // console.log(response.data.results);
       })
       .catch(function (error) {
         console.error(error);

@@ -9,12 +9,13 @@ import InfoOutlinedIcon from "@mui/icons-material/InfoOutlined";
 import { Button, IconButton, Typography } from "@mui/material";
 import Skeleton, { SkeletonTheme } from "react-loading-skeleton";
 import LandingModal from "./LandingModal";
-
+import Genres from "../Genres";
 // eslint-disable-next-line react/prop-types
 export default function Slider({ endpoint, poster_path }) {
   const { theme } = useContext(ThemeContext);
   const [showModal, setShowModal] = useState(false);
   const [modalData, setModalData] = useState(null);
+  console.log(Genres);
 
   const openModal = (item) => {
     setModalData(item);
@@ -93,11 +94,8 @@ export default function Slider({ endpoint, poster_path }) {
                     justifyContent: "space-between",
                   }}
                 >
-                  <IconButton>
-                    <InfoOutlinedIcon
-                      onClick={() => openModal(item)}
-                      style={{ fontSize: "30px" }}
-                    />
+                  <IconButton onClick={() => openModal(item)}>
+                    <InfoOutlinedIcon style={{ fontSize: "30px" }} />
                   </IconButton>
                   <Button
                     variant="outlined"
