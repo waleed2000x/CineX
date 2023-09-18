@@ -19,6 +19,7 @@ export default function User() {
           variant="p"
           color={`${theme === "light" ? "black" : "white"}`}
           fontFamily={"inherit"}
+          marginTop={"10px"}
         >
           Name: User Name
         </Typography>
@@ -26,6 +27,7 @@ export default function User() {
           variant="p"
           color={`${theme === "light" ? "black" : "white"}`}
           fontFamily={"inherit"}
+          marginTop={"10px"}
         >
           Email: someone@something@Cmail.com
         </Typography>
@@ -33,6 +35,7 @@ export default function User() {
           variant="p"
           color={`${theme === "light" ? "black" : "white"}`}
           fontFamily={"inherit"}
+          marginTop={"10px"}
         >
           Contact: +XX XXX XXXXXXXX
         </Typography>
