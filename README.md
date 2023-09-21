@@ -44,7 +44,7 @@ Movies
 
 ![Project Releases ](./ReadMeImages/Releases.png)
 
-# Loading Skeleton added to every call dependent component to throw an impression to the user to wait
+# Loading Skeleton added to every call-dependent component to throw an impression to the user to wait
 
 ![Project Releases ](./ReadMeImages/Skeleton.png)
 
@@ -54,7 +54,7 @@ Movies
 
 # User's Information
 
-Profile Where the user will surprisingly get their Geolocation
+Profile Where the user will get the information provided when DEMO SIGNUP
 ![Project Genres ](./ReadMeImages/Profile.png)
 
 # Footer is currently under consideration to changes
