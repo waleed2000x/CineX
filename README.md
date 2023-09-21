@@ -21,7 +21,7 @@ An entertainment website for Movies and TV Shows
 # Axios
 # Swiper js
 # Framer-Motion
-## Will implement 3 Language switching in future ( English, Urdu, Arabic )
+## Will implement 3 Language switching in the future ( English, Urdu, Arabic )
 
 Visit Now: [Cine X](https://cinx.vercel.app/)
 
