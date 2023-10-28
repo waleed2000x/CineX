@@ -11,7 +11,7 @@
 - useContext
 - customHooks
 - react-router-dom
-- and much more
+- and much mor
 # SCSS
 # Material UI
 # Theme ( Dark & Light )
