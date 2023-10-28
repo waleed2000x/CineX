@@ -4,7 +4,7 @@
 - An entertainment website for Movies and TV Shows
 #Polulated with TMBD API
 
-## Tools & Libraries
+# Tools & Libraries
 # React
 - useState
 - useEffect
