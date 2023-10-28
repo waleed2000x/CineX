@@ -1,4 +1,4 @@
- # Cine X
+# Cine X
 - ( Incomplete )
 ~
 - An entertainment website for Movies and TV Shows
