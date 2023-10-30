@@ -1,5 +1,5 @@
 # Cine X
-- ( Incomplete )
+- ( Incomplete = Non-Responsive )
 ~
 - An entertainment website for Movies and TV Shows
 #Polulated with TMBD API
