@@ -1,4 +1,4 @@
-        # Cine X
+       # Cine X
 - ( Incomplete = Non-Responsive )
 ~
 - An entertainment website for Movies and TV Shows
