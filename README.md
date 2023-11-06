@@ -3,7 +3,6 @@
 - An entertainment website for Movies and TV Shows
 
 #Polulated with TMBD API
-
 # Tools & Libraries
 # React
 - useState
