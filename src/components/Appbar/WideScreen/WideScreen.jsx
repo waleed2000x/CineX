@@ -7,7 +7,7 @@ import DarkModeIcon from "@mui/icons-material/DarkMode";
 import { IconButton, TextField, Typography } from "@mui/material";
 import WideSubScreen from "./WideSubScreen";
 import { NavLink } from "react-router-dom";
-
+import styled from "styled-components";
 export default function WideScreen() {
   const { theme, setTheme } = useContext(ThemeContext);
   const handleTheme = () => {
@@ -33,11 +33,11 @@ export default function WideScreen() {
           </NavLink>
         </div>
         <div className="searchWideScreen">
-          <TextField
+          <StyledTextField
             size="large"
-            label="Search movies to watch"
             variant="standard"
-            fullWidth
+            placeholder="Search movies to watch"
+            // fullWidth
           />
         </div>
         <div className={`themeSwitch `}>
@@ -62,3 +62,15 @@ export default function WideScreen() {
     </>
   );
 }
+
+const StyledTextField = styled.input`
+  background-color: rgba(255, 255, 255, 0.01);
+  border-radius: 5px;
+  border: 1px solid;
+  width: 100%;
+  padding: 15px;
+  outline: none;
+  font-size: 20px;
+  font-family: "Orbitron", sans-serif;
+  color: rgb(103, 102, 102);
+`;
