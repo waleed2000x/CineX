@@ -1,62 +1,73 @@
-    # Cine X  
-- ( Incomplete = Non-Responsive )
-- An entertainment website for Movies and TV Shows
+# Cine X
 
-#Polulated with TMBD API
-# Tools & Libraries
-# React
-- useState
-- useEffect
-- useContext
-- customHooks
-- react-router-dom
-- and much more
-# SCSS
-# Material UI
-# Theme ( Dark & Light )
-# Email js
-# Live Animation
-# Formik (Form Validation)
-# Yup ( Schema for Formik )
-# Axios
-# Swiper js
-# Framer-Motion
-## Will implement 3 Language switching in the future ( English, Urdu, Arabic )
+Cine X is an entertainment website dedicated to movies and TV shows. Although it's currently incomplete and non-responsive, it offers a glimpse into the world of cinema and television.
 
-Visit Now: [Cine X](https://cinx.vercel.app/)
+## Tools & Libraries
 
-# Landing page tells you all about this app
+- **React**: Leveraging features like useState, useEffect, useContext, customHooks, and react-router-dom for a dynamic and seamless user experience.
+- **SCSS**: Utilizing SCSS for efficient styling and maintainability.
+- **Material UI**: Incorporating Material UI components for a polished and intuitive interface.
+- **Theme**: Offering both Dark and Light themes for user preference.
+- **Email JS**: Integrating Email JS for easy communication with users.
+- **Live Animation**: Adding dynamic animations to enhance user engagement.
+- **Formik**: Employing Formik for form validation and management.
+- **Yup**: Utilizing Yup schema for Formik validation.
+- **Axios**: Handling HTTP requests for data fetching.
+- **Swiper js**: Incorporating Swiper js for smooth content sliding.
+- **Framer-Motion**: Adding Framer-Motion for stunning motion effects.
 
-Different nature of movies, documentaries, TV shows, and much more!!!
-![Project First Sight ](./ReadMeImages/Landing.png)
+In the future, we plan to implement three language options: English, Urdu, and Arabic.
 
-# Sliders where the content will not spread too much
+## Visit Now
 
-![Project Type Belt ](./ReadMeImages/Landing2.png)
+Explore Cine X now: [Cine X](https://cinx.vercel.app/)
 
-# This section contains all the popular movies and shows of all time
+# Landing Page
 
-![Project Popular ](./ReadMeImages/Popular.png)
-Movies
-![Project Popular ](./ReadMeImages/Popular2.png)
+The landing page provides an overview of the app's features and offerings.
 
-# This section contains all the freshly released content
+![Landing Page](./ReadMeImages/Landing.png)
 
-![Project Releases ](./ReadMeImages/Releases.png)
+# Type Belt
 
-# Loading Skeleton added to every call-dependent component to throw an impression to the user to wait
+A section dedicated to sliders to ensure content is presented in a concise manner.
 
-![Project Releases ](./ReadMeImages/Skeleton.png)
+![Type Belt](./ReadMeImages/Landing2.png)
 
-# A vast number of genres to populate the app
+# Popular Movies & Shows
 
-![Project Genres ](./ReadMeImages/Genres.png)
+Discover all-time popular movies and shows.
 
-# User's Information
+![Popular Movies & Shows](./ReadMeImages/Popular.png)
 
-Profile Where the user will get the information provided when DEMO SIGNUP
-![Project Genres ](./ReadMeImages/Profile.png)
+# Fresh Releases
 
-# Footer is currently under consideration to changes
+Stay updated with freshly released content.
 
-![Project Genres ](./ReadMeImages/Footer.png)
+![Fresh Releases](./ReadMeImages/Releases.png)
+
+# Loading Skeleton
+
+Enhanced user experience with loading skeleton for call-dependent components.
+
+![Loading Skeleton](./ReadMeImages/Skeleton.png)
+
+# Genres
+
+Explore a vast number of genres available on the app.
+
+![Genres](./ReadMeImages/Genres.png)
+
+# User Profile
+
+Access user information and preferences.
+
+![User Profile](./ReadMeImages/Profile.png)
+
+# Footer
+
+Footer section under consideration for future improvements.
+
+![Footer](./ReadMeImages/Footer.png)
+
+Thank you for exploring Cine X! Feedback and suggestions are always welcome.
